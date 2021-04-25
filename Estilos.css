@@ -132,6 +132,7 @@ main{
         display: block;
         cursor: pointer;
         display: block;
+        font-family: Georgia, 'Times New Roman', Times, serif;
         padding-left: 3px;
         padding-right: 3px;
         padding: 0.5rem;
@@ -159,6 +160,7 @@ main{
                 display: block;
                 padding: 0.5rem 0;
                 transition: all 0.5s linear;
+                font-family: Georgia, 'Times New Roman', Times, serif;
                 border-radius: 5px;
                 margin-left: 60%;
                 text-align: center;
