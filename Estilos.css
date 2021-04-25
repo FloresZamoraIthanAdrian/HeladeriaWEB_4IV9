@@ -193,5 +193,6 @@ main{
     }
     footer ul li{
         width: 40%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
 }
