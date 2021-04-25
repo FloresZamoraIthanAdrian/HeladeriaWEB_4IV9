@@ -1,8 +1,6 @@
 
 body{
-    font-family: 'Bangers', cursive;
-    font-family: 'Oranienbaum', serif;
-    font-family: 'Original Surfer', cursive;
+    font-family: 'Comic Neue', cursive;
     color: black;
     font-size: 1rem;
     line-height: 1.6em;
@@ -38,12 +36,14 @@ p{
     flex-wrap: wrap;
 }
 .logoimagen{
+    cursor: auto;
     width: 90px;
     position: relative;
     margin-top: 5px;
     margin-left: 150px;
 }
 .logo{
+    cursor:auto;
     font-family: 'Bangers', cursive;
     position: relative;
     letter-spacing: 5px;
@@ -81,7 +81,7 @@ header a{
             padding: 0.5rem 1rem;
             transition: all 0.4s linear;
             border-radius: 5px;
-            margin-right: 30px;
+            margin-right: 10px;
         }
         .navigation ul li a:hover {
             background: #db469b;
@@ -105,6 +105,7 @@ footer ul{
 
 }
     footer ul li {
+        cursor: auto;
         display: inline-block;
         display: block;
         transition: all 0.5s linear;
@@ -154,7 +155,7 @@ main{
                 padding: 0.5rem 0;
                 transition: all 0.5s linear;
                 border-radius: 5px;
-                margin-left: 73%;
+                margin-left: 60%;
                 text-align: center;
             }
             .navigation ul li a:hover {
@@ -169,15 +170,21 @@ main{
         padding-top: 50px;
         margin-top: 0;
     }
+    .texto{
+        width: 75%;
+    }
     .espacio{
         display: block;
     }
     .logoimagen{
-        width: 90px;
+        width: 85px;
         margin-left: 15px;
     }
     .logo{
         margin-right: 0;
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+    footer ul li{
+        width: 40%;
     }
 }
