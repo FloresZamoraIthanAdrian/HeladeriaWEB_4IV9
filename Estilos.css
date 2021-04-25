@@ -19,6 +19,9 @@ p{
 .espacio1{
     height: 5px;
 }
+.centro{
+    text-align: center;
+}
 .texto{
     padding: 30px 40px;
     border-radius: 25px;
@@ -62,11 +65,13 @@ header{
     left: 0;
     top: 0;
     right: 0;
+    z-index: 10;
 }
 header a{
     color: white;
     text-decoration: none;
     align-items: center;
+    z-index: 10;
 }
 .navigation ul{
     margin: 0;
@@ -87,6 +92,82 @@ header a{
         .navigation ul li a:hover {
             background: #db469b;
         }
+.formulario{
+    width: 50%;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    background: #dbd6d6;
+}
+.formulario__titulo{
+    text-align: center;
+    margin-top: 0;
+    color: black;
+}
+.formulario__input, .formulario__submit{
+    margin-left: auto;
+    margin-right: auto;
+}
+.formulario__input{
+    display: block; 
+    width: 95%;
+    font-size: 1em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent;
+    border: 1px solid #1c9280;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+.olvidar ul{
+    margin: 20px auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+    .olvidar ul li {
+        display: inline-block;
+    }
+        .olvidar ul li a{
+            background: #1c9280;
+            color: white;
+            display: block;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: all 0.4s linear;
+            border-radius: 5px;
+        }
+        .olvidar ul li a:hover {
+            background: #db469b;
+        }
+.ventana{
+    background: #1c9280;
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    display: none;
+    padding: auto;
+    border: 2px solid #db469b;
+    border-radius: 25px;
+    width: 50%;
+    height: 40%;
+    left: 25%;
+    top: 90%;
+    max-width: 100%;
+    margin: 75% auto;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+}
+textarea{
+    background: #dbd6d6;
+    width: 95%;
+    height: 80px;
+    border: 1px solid #1c9280;
+    border-radius: 5px;
+}
 .nombres{
     font-weight: bold;
     font-size: 0.9em;
@@ -191,8 +272,11 @@ main{
         margin: 0 auto;
         font-size: 1.5rem;
     }
+    .formulario{
+        width: 90%;
+    }
     footer ul li{
-        width: 40%;
+        width: 50%;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
 }

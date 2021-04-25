@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ben & Jerry´s</title>
+    <link rel="icon" href= "imagenes/icon.png">}<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@300&display=swap" rel="stylesheet">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel = "stylesheet" type = 'text/css' href = 'Estilos.css'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9fb0a1aa63.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class = "container logo-nav-container">
+            <image class = "logoimagen" src = "imagenes/logo.png" alt = "No se porque no carga :c" title = "Heladería Internacional"><a href="#" class = "logo">Crear <div class="espacio"></div>Cuenta</a></image>
+            <span class="menu-icon">Ver Menú  <i class="fas fa-chevron-down"></i></span>
+            <nav class = "navigation">
+                <ul>
+                    <li><a href="IniciarSesion.html"><i class="fas fa-home"></i> Iniciar Sesión </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <main>
+            <form action="" class="formulario">
+                <h4 class="formulario__titulo">Por Favor ingrese sus datos para poder disfrutar de los mejores helados</h4>
+                <input type="text" name = "Nombre" class="formulario__input" placeholder="Nombre(s)">
+                <input type="text" name = "Correo Electrónico" class="formulario__input" placeholder="Correo Electrónico">
+                <input type="text" name = "Pais" class="formulario__input" placeholder="País">
+                <input type="text" name = "Estado" class="formulario__input" placeholder="Estado">
+                <input type="text" name = "Municipio" class="formulario__input" placeholder="Municipio">
+                <input type="text" name = "Codigo" class="formulario__input" placeholder="Codigo Postal">
+                <input type="text" name = "Direccion" class="formulario__input" placeholder="Dirección">
+                <input type="text" name = "Numero ext" class="formulario__input" placeholder="Número Ext">
+                <input type="text" name = "Numero Int" class="formulario__input" placeholder="Número Int">
+                <textarea name="Mensaje" class = "formulario__input" placeholder="Espeficaciones"></textarea>
+                <input type="text" name = "Contraseña" class="formulario__input" placeholder="Contraseña (6 caracteres mínimo)">
+                <input type="text" name = "Verificar Contraseña" class="formulario__input" placeholder="Verificar Contraseña">
+                <p class = "centro">Estoy deacuerdo con <a href="javascript:abrir()">Términos y Condiciones <i class="far fa-check-square"></i></a></p>
+                <div class="ventana" id = "vent">
+                    <p class="centro">Aqui van los terminos y condiciones de nuestra pagina web :3</p>
+                    <div class = "olvidar">
+                        <ul>
+                            <li><a href="javascript:cerrar()"> Aceptar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="olvidar">
+                    <ul>
+                        <li><a href="IniciarSesion.html">Registrase</a></li>
+                    </ul> 
+                </div>
+        </main>
+    </section>
+    <footer>
+        <h4>Integrantes</h4>
+        <div class="nombres">
+            <ul>
+                <li><i class="fas fa-ice-cream"></i> Castañeda Rodríguez<br>Rafael Gil</li><div class="espacio1"></div>
+                <li><i class="fas fa-ice-cream"></i> Flores Zamora<br>Ithan Adrian</li><div class="espacio1"></div>
+                <li><i class="fas fa-ice-cream"></i> Gallegos González<br>Gian Carlo</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+        function abrir(){
+            document.getElementById("vent").style.display="block";
+        }
+        function cerrar(){
+            document.getElementById("vent").style.display="none";
+        }
+    </script>
+</body>
+</html>
