@@ -47,8 +47,8 @@ p{
     font-family: 'Bangers', cursive;
     position: relative;
     letter-spacing: 5px;
-    font-size: 2.5em;
-    margin-right: 400px;
+    font-size: 1.6em;
+    margin: 0 auto;
 }
 .menu-icon{
     display: none;
@@ -172,6 +172,7 @@ main{
     }
     .texto{
         width: 75%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
     }
     .espacio{
         display: block;
@@ -181,7 +182,7 @@ main{
         margin-left: 15px;
     }
     .logo{
-        margin-right: 0;
+        margin: 0 auto;
         font-size: 1.5rem;
     }
     footer ul li{
