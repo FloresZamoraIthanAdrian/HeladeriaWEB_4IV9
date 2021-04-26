@@ -34,25 +34,20 @@
 
                 <h4 class="formulario__titulo">Por Favor ingrese sus datos para poder disfrutar de los mejores helados</h4>
                 
-                <input type="text" name = "Nombre" class="formulario__input" placeholder="Nombre(s)">
-                <input type="text" name = "Apellido_Paterno" class="formulario__input" placeholder="Apellido paterno">
-                <input type="text" name = "Apellido_Materno" class="formulario__input" placeholder="Apellido materno">
-                <input type="text" name = "Edad" class="formulario__input" placeholder="Edad">
-                <input type="text" name = "Fecha de nacimiento" class="formulario__input" placeholder="Fecha de nacimiento">
-                <input type="text" name = "Telefono_Particular" class="formulario__input" placeholder="Telefono particular">
-                <input type="text" name = "Telefono_Celular" class="formulario__input" placeholder="Telefono celular">
-                <!-- <input type="text" name = "Correo Electrónico" class="formulario__input" placeholder="Correo Electrónico"> -->
-                <input type="text" name = "Domicilio" class="formulario__input" placeholder="Domicilio">
-                <!-- <input type="text" name = "Estado" class="formulario__input" placeholder="Estado"> -->
-                <!-- <input type="text" name = "Municipio" class="formulario__input" placeholder="Municipio"> -->
-                <!-- <input type="text" name = "Codigo" class="formulario__input" placeholder="Codigo Postal"> -->
-                <!-- <input type="text" name = "Direccion" class="formulario__input" placeholder="Dirección"> -->
-                <!-- <input type="text" name = "Numero ext" class="formulario__input" placeholder="Número Ext"> -->
-                <!-- <input type="text" name = "Numero Int" class="formulario__input" placeholder="Número Int"> -->
-                <!-- <textarea name="Mensaje" class = "formulario__input" placeholder="Espeficaciones"></textarea> -->
+                <input type="text" onkeypress="return validarLetras(event)" name = "Nombre" class="formulario__input" placeholder="Primer nombre">
+                <input type="text" onkeypress="return validarLetras(event)" name = "Apellido_Paterno" class="formulario__input" placeholder="Apellido paterno">
+                <input type="text" onkeypress="return validarLetras(event)" name = "Apellido_Materno" class="formulario__input" placeholder="Apellido materno">
+                <input type="text" onkeypress="return validarLetras(event)" name = "Usuario" class="formulario__input" placeholder="Usuario">
 
-                <input type="text" name = "Contraseña" class="formulario__input" placeholder="Contraseña (6 caracteres mínimo)">
-                <input type="text" name = "Verificar Contraseña" class="formulario__input" placeholder="Verificar Contraseña">
+                <input type="text" onkeypress="return validarNumeros(event)" name = "Edad" class="formulario__input" placeholder="Edad">
+                <input type="text" onkeypress="return validarNumeros(event)" name = "Fecha de nacimiento" class="formulario__input" placeholder="Fecha de nacimiento">
+                <input type="text" onkeypress="return validarNumeros(event)" name = "Telefono_Particular" class="formulario__input" placeholder="Telefono particular">
+                <input type="text" onkeypress="return validarNumeros(event)" name = "Telefono_Celular" class="formulario__input" placeholder="Telefono celular">
+                <!-- <input type="text" name = "Correo Electrónico" class="formulario__input" placeholder="Correo Electrónico"> -->
+                <input type="text" onkeypress="return validarAlfaNumericos(event)" name = "Domicilio" class="formulario__input" placeholder="Domicilio">
+
+                <input type="text" onkeypress="return validarAlfaNumericos(event)" name = "Contraseña" class="formulario__input" placeholder="Contraseña (6 caracteres mínimo)">
+                <input type="text" onkeypress="return validarAlfaNumericos(event)" name = "Verificar Contraseña" class="formulario__input" placeholder="Verificar Contraseña">
 
                 <p class = "centro">Estoy deacuerdo con <a href="javascript:abrir()">Términos y Condiciones <i class="far fa-check-square"></i></a></p>
 
@@ -67,7 +62,8 @@
 
                 <div class="olvidar">
                     <ul>
-                        <li><a href="./IniciarSesion.html">Registrase</a></li>
+                        <li><a href="./IniciarSesion.html">Registrarse</a></li>
+                        <!-- <li>Registrarse</li> -->
                     </ul> 
                 </div>
         </main>
