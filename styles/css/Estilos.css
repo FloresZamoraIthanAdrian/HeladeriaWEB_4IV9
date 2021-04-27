@@ -7,7 +7,7 @@ body{
     margin: 0;
 }
 section{
-    background-image: url(imagenes/fondo.png);
+    background-image: url(../../images/fondo.png );
 }
 p{
     margin-bottom: 1.6em;
