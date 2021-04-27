@@ -3,13 +3,16 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Ben & Jerry´s</title>
-    <link rel="icon" href= "imagenes/icon.png">}<link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Olvidar Contraseña</title>
+    <link rel="icon" href= "images/icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@300&display=swap" rel="stylesheet">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
-    <link rel = "stylesheet" type = 'text/css' href = 'Estilos.css'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/js/scripts.js"></script>
+    <link rel = "stylesheet" type = 'text/css' href = 'styles/css/Estilos.css'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/9fb0a1aa63.js" crossorigin="anonymous"></script>
@@ -17,11 +20,12 @@
 <body>
     <header>
         <div class = "container logo-nav-container">
-            <image class = "logoimagen" src = "imagenes/logo.png" alt = "No se porque no carga :c" title = "Heladería Internacional"><a href="#" class = "logo">Olvide Mi <div class="espacio"></div> Contraseña</a></image>
+            <image class = "logoimagen" src = "images/logo.png" alt = "No se porque no carga :c" title = "Heladería Internacional"><a href="#" class = "logo">Olvide Mi <div class="espacio"></div> Contraseña</a></image>
+            <span class="menu-icon">Ver Menú  <i class="fas fa-chevron-down"></i></span>
             <div class = "espacio"></div>
             <nav class = "navigation">
                 <ul>
-                    <li><a href= "IniciarSesion.html"><i class="fas fa-door-open"></i> Regresar </a></li>
+                    <li onclick="javascript:IniciarSesion()"><i class="fas fa-door-open"></i> Regresar</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,12 +33,13 @@
     <section>
         <main>
             <form action="" class="formulario">
-                <p class="centro"> Por favor ingrese su correo electrónico.</p>
+                <p class="centro">Por favor ingrese su correo electrónico.</p>
                 <p class="centro">Se le enviara un código a su correo con el que se haya registrado.</p>
                 <input type="text" name = "Correo Electrónico" class="formulario__input" placeholder="Correo Electrónico">
-                <div class="olvidar">
+                <div class="botones">
                     <ul>
-                        <li><a href="Codigo.html"><i class="far fa-paper-plane"></i> Enviar</a></li>
+                        <!-- ESTOY HACIENDO ESTE
+                        <li onclick="javascript:Codigo()"><i class="far fa-paper-plane"></i> Enviar</li>-->
                     </ul>
                 </div>
             </form>
@@ -42,13 +47,11 @@
     </section>
     <footer>
         <h4>Integrantes</h4>
-        <div class="nombres">
-            <ul>
-                <li><i class="fas fa-ice-cream"></i> Castañeda Rodríguez<br>Rafael Gil</li><div class="espacio1"></div>
-                <li><i class="fas fa-ice-cream"></i> Flores Zamora<br>Ithan Adrian</li><div class="espacio1"></div>
-                <li><i class="fas fa-ice-cream"></i> Gallegos González<br>Gian Carlo</li>
-            </ul>
-        </div>
+        <ul>
+            <li><i class="fas fa-ice-cream"></i> Castañeda Rodríguez <div class="espacio"></div>Rafael Gil</li><div class="espacio1"></div>
+            <li><i class="fas fa-ice-cream"></i> Flores Zamora <div class="espacio"></div>Ithan Adrian</li><div class="espacio1"></div>
+            <li><i class="fas fa-ice-cream"></i> Gallegos González <div class="espacio"></div>Gian Carlo</li>
+        </ul>
     </footer>
 </body>
 </html>
