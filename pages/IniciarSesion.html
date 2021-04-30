@@ -3,12 +3,14 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Ben & Jerry´s</title>
-    <link rel="icon" href= "../images/icon.png"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Iniciar Sesión</title>
+    <link rel="icon" href= "../images/icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@300&display=swap" rel="stylesheet">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <!-- <script src='main.js'></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel = "stylesheet" type = 'text/css' href = '../styles/css/Estilos.css'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
@@ -21,43 +23,44 @@
             <span class="menu-icon">Ver Menú  <i class="fas fa-chevron-down"></i></span>
             <nav class = "navigation">
                 <ul>
-                    <li><a href="./CrearCuenta.html"><i class="fas fa-user"></i> Registrarse </a></li>
+                    <li onclick="javascript:CrearCuenta()"><i class="fas fa-user"></i> Crear Cuenta</a></li>
+                    <li onclick="javascript:Inicio();"><i class="fas fa-door-open"></i> Regresar</li>
                 </ul>
             </nav>
         </div>
     </header>
     <section>
         <main>
-            <form action="" class="formulario">
-                <h4 class="formulario__titulo">¡Compra tus helados favoritos aqu!</h4>
+            <form action="" name="formulario" onsubmit="return validar(this)" class="formulario">
 
-                <input onkeypress="return validarLetras(event)" type="text" name = "Usuario" class="formulario__input" placeholder="Usuario">
-                <input onkeypress="return validarAlfaNumericos(event)" type="text" name = "Contraseña" class="formulario__input" placeholder="Contraseña">
-
-                <div class="olvidar">
+                <h4 class="formulario__titulo">¡Compra tus helados favoritos aquí!</h4>
+                <input id="inputXD" onkeypress="return validarLetras(event)" type="text" name = "usuario" class="formulario__input" placeholder="Usuario">
+                <input id="inputXD" onkeypress="return validarAlfaNumericos(event)" type="text" name = "contraseña" class="formulario__input" placeholder="Contraseña">
+                <div class="botones">
                     <ul>
-                        <li><a href="Chat.html"><i class="far fa-paper-plane"></i> Enviar</a></li>
+                        <!-- <li><i class="far fa-paper-plane"></i> Enviar</li> -->
+                        <input type="submit" value="Iniciar Sesion">
                     </ul>
                 </div>
+
             </form>
-        <div class = "espacioV1"></div>
-        <div class="olvidar">
+        <div class="botones">
             <ul>
-                <li><a href="./Olvidar.html"><i class="fas fa-key"></i> Olvide mi Contraseña</a></li>
+                <li onclick="javaascript: Olvidar()"><i class="fas fa-key"></i> Olvide mi Contraseña</li>
             </ul>
         </main>
     </section>
     <footer>
         <h4>Integrantes</h4>
-        <div class="nombres">
-            <ul>
-                <li><i class="fas fa-ice-cream"></i> Castañeda Rodríguez<br>Rafael Gil</li><div class="espacio1"></div>
-                <li><i class="fas fa-ice-cream"></i> Flores Zamora<br>Ithan Adrian</li><div class="espacio1"></div>
-                <li><i class="fas fa-ice-cream"></i> Gallegos González<br>Gian Carlo</li>
-            </ul>
-        </div>
+        <ul>
+            <li><i class="fas fa-ice-cream"></i> Castañeda Rodríguez <div class="espacio"></div>Rafael Gil</li><div class="espacio1"></div>
+            <li><i class="fas fa-ice-cream"></i> Flores Zamora <div class="espacio"></div>Ithan Adrian</li><div class="espacio1"></div>
+            <li><i class="fas fa-ice-cream"></i> Gallegos González <div class="espacio"></div>Gian Carlo</li>
+        </ul>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="../scripts/js/scripts.js"></script>
+    <script src="../scripts/js/validarFormularios.js"></script>
+
 </body>
 </html>
