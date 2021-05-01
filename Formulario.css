@@ -1,0 +1,287 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 1rem;
+    line-height: 1.6em;
+    margin: 0;
+}
+section{
+    background: #e6e3e3;
+    background: -moz-linear-gradient(-45deg,  #e6e3e3 0%, #dbd6d6 50%, #e6e3e3 50%, #dbd6d6 100%);
+    background: -webkit-linear-gradient(-45deg,  #e6e3e3 0%,#dbd6d6 50%,#e6e3e3 50%,#dbd6d6 100%);
+    background: linear-gradient(135deg,  #e6e3e3 0%,#dbd6d6 50%,#e6e3e3 50%,#dbd6d6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e3e3', endColorstr='#dbd6d6',GradientType=1 );
+    padding-bottom: 4rem;
+    padding-top: 11rem;
+    margin-bottom: 0;
+}
+.container{
+    width: 85%;
+    max-width: 900px;
+    margin: auto;
+    text-align: justify;
+}
+p{
+    margin-bottom: 1.6em;
+}
+.espacio{
+    padding-top: 1em;
+}
+.espacioV{
+    display: none;
+}
+.espacioV1{
+    height: 30px;
+}
+.centro{
+    text-align: center;
+}
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo{
+    position: relative;
+    font-size: 1.5em;
+    letter-spacing: 10px;
+}
+.menu-icon{
+    display: none;
+}
+header{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: #9f0000;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    align-items: center;
+}
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+    .navigation ul li {
+        display: inline-block;
+        cursor: pointer;
+        background: #9f0000;
+        color: white;
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+        .navigation ul li:hover {
+            background: #dbd6d6;
+            color: black;
+            box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+        }
+.formulario{
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    position: relative;
+}
+.formulario__titulo{
+    text-align: center;
+    margin-top: 0;
+    color: black;
+}
+.formulario__input, .formulario__submit{
+    margin-left: auto;
+    margin-right: auto;
+}
+.formulario__input{
+    display: block; 
+    width: 95%;
+    font-size: 1em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0.7);
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    position: relative;
+    transition: all 0.3s;
+}
+.formulario__input:focus{
+    outline: 1px solid rgba(0,0,0,0.3);
+    width: 100%;
+    background: rgba(0,0,0,0.05);
+    font-size: 1em;
+}
+.olvidar ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+    .olvidar ul li {
+        cursor: pointer;
+        display: inline-block;
+        background: #dbd6d6;
+        color: black;
+        display: block;
+        margin: 0 auto;
+        width: 30%;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+        }
+        .olvidar ul li:hover {
+            background: #9f0000;
+            color: white;
+            box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+        }
+.ventana{
+    background: rgb(75, 75, 75);
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    display: none;
+    padding: auto;
+    border: 2px solid white;
+    border-radius: 25px;
+    width: 50%;
+    height: 40%;
+    left: 25%;
+    top: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+}
+.cuadro{
+    padding-top: 1rem;
+    width: 85%;
+    max-width: 900px;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    text-align: center;
+}
+.pregunta{
+    border-top: 2px solid silver ;
+    padding-top: 20px;
+    text-align: justify;
+    font-size: 1em;
+    margin: auto 5%;
+}
+.carita{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.formulario2{
+    margin: auto 5%;
+    padding: 20px;
+    border-bottom: 2px solid silver ;
+}
+.formulario2 input[type = "radio"]{
+    display: none;
+}
+.formulario2 .radio label{
+    margin: 5px;
+    color: black;
+    padding: 5px 25px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.formulario2 .radio label:hover{
+    background: silver;
+}
+.formulario2 input[type = "radio"]:checked + label{
+    padding: 5px 15px;
+    background: #9f0000;
+    color: white;
+}
+.imagen{
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 25px;
+    width: 30%;
+    transition: all 0.5s;
+}
+.imagen:hover{
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+}
+.nombres{
+    font-size: 0.9em;
+}
+footer{
+    background: #9f0000;
+    padding: 4rem 0;
+    text-align: center;
+    color: white;
+}
+footer ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+
+}
+    footer ul li {
+        display: inline-block;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        transition: all 0.5s linear;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+    }
+    footer ul li:hover {
+        background: #dbd6d6;
+        color: black;
+        box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    }
+@media only screen and (max-width: 900px) {
+    main{
+        margin-bottom: 0;
+        padding-bottom: 0;
+        padding-top: 9rem;
+        margin-top: 0;
+    }
+    section{
+        padding-top: 50px;
+        margin-top: 0;
+    }
+    .logo{
+        position: relative;
+        font-size: 1.5em;
+        letter-spacing: 5px;
+    }
+    .espacioV{
+        display: block;
+        height: 10px;
+    }
+    .formulario{
+        width: 300px;
+    }
+    .ventana{
+        width: 70%;
+        height: 40%;
+        left: 15%;
+        top: 80%;
+    }
+}

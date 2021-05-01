@@ -3,13 +3,11 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Iniciar Sesión</title>
+    <title>Formulario</title>
     <link rel="icon" href= "imagenes/EscudoVelox2.png">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts.js"></script>
     <link rel = "stylesheet" type = 'text/css' href = 'Formulario.css'>
@@ -18,34 +16,34 @@
 <body>
     <header>
         <div class = "container logo-nav-container">
-            <p class = "logo"><i class="fas fa-home"></i> Iniciar<br class = 'espacioV'> Sesión</p>
+            <p class = "logo"><i class="far fa-smile"></i> Formulario</p>
             <div class = "espacio"></div>
             <nav class = "navigation">
                 <ul>
-                    <li onclick="javascript:crearcuenta()"><i class="fas fa-user-circle"></i> Crear Cuenta</li>
+                    <li onclick="javascript:chat()"><i class="fas fa-door-open"></i> Regresar</li>
                 </ul>
             </nav>
         </div>
     </header>
     <section>
         <main>
-            <form action="" name = "formularioInicio" onsubmit="return validarInicioSesion(this)" class="formulario">
-                <h4 class="formulario__titulo">¡Bienvenido!</h4>
-                <input id="inputXD" type="email" name = "CorreoElectrónico" class="formulario__input" placeholder="Correo Electrónico">
-                <input id="inputXD" type="password" name = "Contraseña" class="formulario__input" placeholder="Contraseña">
-                <div class="olvidar">
-                    <ul>
-                        <input type="submit" value="Iniciar Sesion">
-                        <!-- <li onclick="javascript:chat()"><i class="far fa-paper-plane"></i> Enviar</li> -->
-                    </ul>
-                </div>
-            </form>
-        <div class = "espacioV1"></div>
-        <div class="olvidar">
-            <ul>
-                <li onclick="javascript:olvidar()"><i class="fas fa-key"></i> Olvide mi Contraseña</li>
-            </ul>
-        </div>
+            <div class= "cuadro">
+                <div class="pregunta"> Esta es una pregunta prueba, esto tiene como fin ayudar al programador del frontend a ver las dimensiones de las preguntas verdaderas asi que ignora esto</div>
+                <form  action = "" class="formulario2">
+                    <div class="radio">
+                        <input type="radio" name = "respuesta1" id = "Siempre">
+                        <label for="Siempre"><div class="carita"><i class="far fa-smile"></i></div> Siempre</label>
+                        <input type="radio" name = "respuesta2" id = "Casi_Siempre">
+                        <label for="Casi_Siempre"><div class="carita"><i class="far fa-smile"></i></div> Casi Siempre</label>
+                        <input type="radio" name = "respuesta3" id = "A_Veces">
+                        <label for="A_Veces"><div class="carita"><i class="far fa-smile"></i></div> A Veces</label>
+                        <input type="radio" name = "respuesta4" id = "Rara_Vez">
+                        <label for="Rara_Vez"><div class="carita"><i class="far fa-smile"></i></div> Rara Vez</label>
+                        <input type="radio" name = "respuesta5" id = "Nunca">
+                        <label for="Nunca"><div class="carita"><i class="far fa-smile"></i></div> Nunca</label>
+                    </div>
+               </form>
+               <image src = "imagenes/Feliz.svg" class="imagen"></image>
         </main>
     </section>
     <footer>
