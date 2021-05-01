@@ -1,0 +1,336 @@
+body{
+    color: black;
+    font-size: 1rem;
+    font-family: 'Comic Neue', cursive;
+    line-height: 1.6em;
+    margin: 0;
+}
+section{
+    background-image: url(../../images/fondo.png);
+}
+p{
+    margin-bottom: 1.6em;
+}
+.espacio{
+    display: none;
+    height: 5px;
+}
+.espacio1{
+    height: 5px;
+}
+.centro{
+    text-align: center;
+}
+.texto{
+    background: #dbd6d6;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    border-radius: 25px;
+    text-align: justify;
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logoimagen{
+    position: relative;
+    cursor: auto;
+    width: 90px;
+    margin-top: 5px;
+    margin-left: 150px;
+}
+.logo{
+    position: relative;
+    cursor:auto;
+    font-family: 'Bangers', cursive;
+    font-size: 1.6em;
+    letter-spacing: 5px;
+    margin: 0 auto;
+}
+.menu-icon{
+    display: none;
+}
+header{
+    position: fixed;
+    background: #1c9280;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+header a{
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    z-index: 10;
+}
+.navigation ul{
+    cursor: pointer;
+    list-style: none;
+}
+    .navigation ul li {
+        display: inline-block;
+        font-family: 'Comic Neue', cursive;
+        border-radius: 5px;
+        margin-right: 25px;
+        padding: 0.5rem 0.5rem;
+        transition: all 0.4s linear;
+    }
+    .navigation ul li:hover {
+        background: #db469b;
+    }
+.formulario{
+    background: #dbd6d6;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    width: 50%;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+.formulario__titulo{
+    color: black;
+    text-align: center;
+    margin-top: 0;
+}
+.formulario__input, .formulario__submit{
+    margin-left: auto;
+    margin-right: auto;
+}
+.formulario__input{
+    display: block; 
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid #1c9280;
+    font-size: 1em;
+    width: 95%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.botones ul{
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+}
+    .botones ul li{
+        background: #1c9280;
+        color: white;
+        border-radius: 5px;
+        width: 30%;
+        padding: 0.5rem;
+        margin: 0 auto;
+        transition: all 0.4s linear;
+    }
+    .botones ul li:hover {
+        background: #db469b;
+    }
+.ventana{
+    display: none;
+    position: absolute;
+    background: #1c9280;
+    color: white;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    font-size: 1em;
+    border-radius: 25px;
+    width: 50%;
+    padding: 50px 20px;
+    left: 23.5%;
+}
+.espaciado{
+    float: left;
+    border: 2px solid transparent;
+    padding-left: 13%;
+}
+.espaciado1{
+    display: none;
+    float: left;
+    border: 2px solid transparent;
+    padding-left: 13%;
+}
+.producto{
+    display: inline-block;
+    position: relative;
+    background: #dbd6d6;
+    color: black;
+    border-radius: 35px;
+    border: 2px solid black;
+    width: 300px;
+    height: 500px;
+    margin: 15px;
+    transition: all 0.3s;
+}
+.producto:hover{
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.7);
+    border: 2px solid #dbd6d6;
+}
+.precios{
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 5px;
+    width: 90%;
+    height: 45%;
+    margin: 0 auto;
+    margin-top: 85%;
+    transition: all 0.4s;
+}
+.precios:hover{
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.7);
+}
+.boton{
+    cursor: pointer;
+    text-align: center;
+    background: #1c9280;
+    color: white;
+    border-radius: 5px;
+    width: 34%;
+    margin-left: 33%;
+    padding: 0.5rem;
+    transition: all 0.4s linear;
+}
+.boton:hover {
+    background: #db469b;
+}
+.vent{
+    display: none;
+    position: absolute;
+    background: #dbd6d6;
+    color: black;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    font-size: 1em;
+    border: 2px solid black;
+    border-radius: 25px;
+    width: 50%;
+    padding: 50px 20px;
+    left: 23.5%;
+    bottom: 5%;
+}
+.em7{
+    text-align: center;
+    font-size: 0.7em;
+    margin-top: 1px;
+}
+.centro{
+    text-align: center;
+    margin-bottom: 1px;
+}
+.izquierda{
+    text-align: left;
+    margin-bottom: 1px;
+}
+footer{
+    background: #1c9280;
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+footer ul{
+    list-style: none;
+    font-weight: bold;
+    text-align: justify;
+    font-size: 0.9em;
+}
+    footer ul li {
+        cursor: auto;
+        color: white;
+        font-family: 'Comic Neue', cursive;
+        text-decoration: none;
+        border-radius: 5px;
+        width: 20%;
+        margin: 0 auto;
+        padding: 0.5rem;
+        transition: all 0.5s linear;
+    }
+    footer ul li:hover {
+        background: #db469b;
+    }
+main{
+    padding-top: 13rem;
+    padding-bottom: 5rem;
+}
+@media only screen and (max-width: 900px) {
+    body{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border-radius: 5px;
+        margin-right: 20px;
+        padding: 0.5rem;
+        transition: all 0.5s linear;
+    }
+    .menu-icon:hover{
+        background: #db469b;
+    }
+    .navigation{
+        width: 100%;
+        margin-top: 1rem;   
+    }
+    .navigation ul{
+        display: none;
+    }
+    .navigation ul.show{
+        display: block;
+    }
+        .navigation ul li {
+            display: block;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-radius: 5px;
+            margin-left: 50%;
+            transition: all 0.5s linear;
+        }
+        .navigation ul li a:hover {
+            background: #db469b;
+        }
+    main{
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 12rem;
+    }
+    section{
+        margin-top: 0;
+        padding-top: 50px;
+    }
+    .texto{
+        width: 75%;
+    }
+    .espacio{
+        display: block;
+    }
+    .logoimagen{
+        width: 85px;
+        margin-left: 15px;
+    }
+    .logo{
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+    .ventana{
+        width: 70%;
+        left: 11%;
+    }
+    .formulario{
+        width: 90%;
+        left: 0;
+        top: 0;
+    }
+    footer ul li{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        width: 50%;
+    }
+    .espaciado1{
+        display: block;
+    }
+}
