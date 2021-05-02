@@ -136,31 +136,13 @@ header a{
     left: 23.5%;
 }
 .enlaces{
-    background: #1c9280;
+    background: #db469b;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.enlaces ul{
-    list-style: none;
-}
-    .enlaces ul li{
-        display: inline-block;
-    }
-    .enlaces ul li a{
-        text-decoration: none;
-        color: white;
-        font-family: 'Comic Neue', cursive;
-        border-radius: 5px;
-        width: 100%;
-        margin: 0 45px;
-        padding: 0.5rem 0.5rem;
-        transition: all 0.4s linear;
-    }
-    .enlaces ul li a:hover {
-        background: #db469b;
-        box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
-    }
 .espaciado{
     float: left;
     border: 2px solid transparent;
@@ -250,6 +232,22 @@ header a{
     margin-top: 5px;
     padding: 0.5rem;
     transition: all 0.4s linear;
+}
+.boton3 ul{
+    list-style: none;
+}
+.boton3 ul li{
+    display: inline-block;
+    margin-left: 115px;
+}
+.boton3 ul li a{
+    display: inline-block;
+    width: 70%;
+}
+.boton3 ul li a:hover {
+    background: #1c9280;
+    border: 1px solid #1c9280;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
 }
 .boton3 a:hover {
     background: #1c9280;
@@ -410,7 +408,11 @@ main{
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
     footer .boton2{
-        width: 40%;
-        margin-left: 30%;;
+        width: 46%;
+        margin-left: 27%;;
+    }
+    .boton3 ul li{
+        display: inline-block;
+        margin-left: 34px;
     }
 }
