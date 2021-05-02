@@ -300,6 +300,17 @@ header a{
     right: 0;
     left: 0;
 }
+.helados{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 15%;
+    width: 70%;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.helados:hover{
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+}
 footer{
     background: #1c9280;
     color: white;
