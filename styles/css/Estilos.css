@@ -413,6 +413,6 @@ main{
     }
     .boton3 ul li{
         display: inline-block;
-        margin-left: 34px;
+        margin-left: 2.5rem;
     }
 }
