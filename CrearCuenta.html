@@ -43,32 +43,23 @@
                 <input type="text" onkeypress="return validarNumeros(event)" name = "Telefono_Particular" class="formulario__input" placeholder="Telefono particular">
                 <input type="text" onkeypress="return validarNumeros(event)" name = "Telefono_Celular" class="formulario__input" placeholder="Telefono celular">
                 <input type="text" onkeypress="return validarAlfaNumericos(event)" name = "Domicilio" class="formulario__input" placeholder="Domicilio">
-                <input type="text" onkeypress="return validarAlfaNumericos(event)" name = "Contraseña" class="formulario__input" placeholder="Contraseña">
-                <input type="text" onkeypress="return validarAlfaNumericos(event)" name = "Verificar Contraseña" class="formulario__input" placeholder="Verificar Contraseña">
+                <input type="password" onkeypress="return validarAlfaNumericos(event)" name = "Contraseña" class="formulario__input" placeholder="Contraseña">
+                <input type="password" onkeypress="return validarAlfaNumericos(event)" name = "Verificar Contraseña" class="formulario__input" placeholder="Verificar Contraseña">
                 <p class = "centro">Estoy deacuerdo con <a href="javascript:abrir()">Términos y Condiciones <i class="far fa-check-square"></i></a></p>
+                <input type="submit" class="boton2" onclick="javascript:IniciarSesion()" value = "Crear Cuenta"> 
+                <!--Aqui debe verficar los datos para despues mandarte a la pagina de iniciar sesion-->
                 <div class="ventana" id = "vent">
                     <p class="centro">Aqui van los terminos y condiciones de nuestra pagina web :3</p>
-                    <div class = "botones">
-                        <ul>
-                            <li onclick="javascript:cerrar()">Aceptar</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="botones">
-                    <ul>
-                        <li onclick="javascript:IniciarSesion()">Registrarse</li>
-                    </ul> 
+                    <div class = "boton2" onclick="javascript:cerrar()">Aceptar</div>
                 </div>
             </form>
         </main>
     </section>
     <footer>
         <h4>Integrantes</h4>
-        <ul>
-            <li><i class="fas fa-ice-cream"></i> Castañeda Rodríguez <div class="espacio"></div>Rafael Gil</li><div class="espacio1"></div>
-            <li><i class="fas fa-ice-cream"></i> Flores Zamora <div class="espacio"></div>Ithan Adrian</li><div class="espacio1"></div>
-            <li><i class="fas fa-ice-cream"></i> Gallegos González <div class="espacio"></div>Gian Carlo</li>
-        </ul>
+        <div class="boton2"><i class="fas fa-ice-cream"></i> Castañeda Rodríguez <div class="espacio"></div>Rafael Gil</div>
+        <div class="boton2"><i class="fas fa-ice-cream"></i> Flores Zamora <div class="espacio"></div>Ithan Adrian</div>
+        <div class="boton2"><i class="fas fa-ice-cream"></i> Gallegos González <div class="espacio"></div>Gian Carlo</div>
     </footer>
 </body>
 </html>
