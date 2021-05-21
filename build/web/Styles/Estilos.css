@@ -1,0 +1,418 @@
+body{
+    color: black;
+    font-size: 1rem;
+    font-family: 'Comic Neue', cursive;
+    line-height: 1.6em;
+    margin: 0;
+}
+section{
+    background-image: url(../images/fondo4.jpg);
+}
+p{
+    margin-bottom: 1.6em;
+}
+.espacio{
+    display: none;
+    height: 5px;
+}
+.espacio1{
+    height: 5px;
+}
+.centro{
+    text-align: center;
+}
+.texto{
+    background: rgb(28, 146, 128);
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    border-radius: 25px;
+    color: black;
+    text-align: justify;
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 40px;
+}
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logoimagen{
+    position: relative;
+    cursor: auto;
+    width: 90px;
+    margin-top: 5px;
+    margin-left: 150px;
+}
+.logo{
+    position: relative;
+    cursor:auto;
+    font-family: 'Bangers', cursive;
+    font-size: 1.6em;
+    letter-spacing: 5px;
+    margin: 0 auto;
+}
+.menu-icon{
+    display: none;
+}
+header{
+    position: fixed;
+    background: #1c9280;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+header a{
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    z-index: 10;
+}
+.navigation ul{
+    cursor: pointer;
+    list-style: none;
+}
+    .navigation ul li {
+        display: inline-block;
+        font-family: 'Comic Neue', cursive;
+        border-radius: 5px;
+        margin-right: 25px;
+        padding: 0.5rem 0.5rem;
+        transition: all 0.4s linear;
+    }
+    .navigation ul li:hover {
+        background: #db469b;
+        box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    }
+.formulario{
+    background: rgb(28, 146, 128);
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    width: 50%;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+.formulario__titulo{
+    color: black;
+    text-align: center;
+    margin-top: 0;
+}
+.formulario__input, .formulario__submit{
+    margin-left: auto;
+    margin-right: auto;
+}
+.formulario__input{
+    display: block; 
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid black;
+    color: black;
+    font-size: 1em;
+    width: 95%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.formulario__input::placeholder{
+    color: black;
+}
+.ventana{
+    display: none;
+    position: absolute;
+    background: #1c9280;
+    color: white;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    font-size: 1em;
+    border-radius: 25px;
+    width: 50%;
+    padding: 50px 20px;
+    left: 23.5%;
+}
+.enlaces{
+    background: #db469b;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.espaciado{
+    float: left;
+    border: 2px solid transparent;
+    padding-left: 12%;
+}
+.espaciado1{
+    display: none;
+    float: left;
+    margin-left: 0;
+    padding-left: 13%;
+    height: 400px;
+    margin-top: 40px;
+}
+.producto{
+    display: inline-block;
+    position: relative;
+    background: rgba(28, 146, 128, 0.9);
+    color: black;
+    border-radius: 35px;
+    border: 2px solid black;
+    width: 300px;
+    height: 500px;
+    margin: 15px;
+    transition: all 0.3s;
+}
+.producto:hover{
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.7);
+    border: 2px solid rgba(28, 146, 128, 0.9);
+}
+.precios{
+    border: 2px solid black;
+    border-radius: 25px;
+    background: rgba(219,70,155,0.8);
+    padding: 5px;
+    width: 90%;
+    height: 45%;
+    margin: 0 auto;
+    margin-top: 85%;
+    transition: all 0.4s;
+}
+.precios:hover{
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.7);
+}
+.boton{
+    cursor: pointer;
+    text-align: center;
+    background: #db469b;
+    border: 1px solid #db469b;
+    color: white;
+    border-radius: 5px;
+    width: 34%;
+    margin-left: 33%;
+    margin-top: 5px;
+    padding: 0.5rem;
+    transition: all 0.4s linear;
+}
+.boton:hover {
+    background: #1c9280;
+    border: 1px solid #1c9280;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+}
+.boton2{
+    cursor: pointer;
+    text-align: center;
+    background: #1c9280;
+    border: 1px solid #1c9280;
+    color: white;
+    border-radius: 5px;
+    width: 34%;
+    margin-left: 33%;
+    margin-top: 5px;
+    padding: 0.5rem;
+    transition: all 0.4s linear;
+}
+.boton3 a{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    background: #db469b;
+    border: 1px solid #db469b;
+    font-size: 0.8em;
+    color: white;
+    border-radius: 5px;
+    width: 10%;
+    margin-left: 45%;
+    margin-top: 5px;
+    padding: 0.5rem;
+    transition: all 0.4s linear;
+}
+.boton3 ul{
+    list-style: none;
+}
+.boton3 ul li{
+    display: inline-block;
+    margin-left: 115px;
+}
+.boton3 ul li a{
+    display: inline-block;
+    width: 70%;
+}
+.boton3 ul li a:hover {
+    background: #1c9280;
+    border: 1px solid #1c9280;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+}
+.boton3 a:hover {
+    background: #1c9280;
+    border: 1px solid #1c9280;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+}
+.boton2:hover {
+    background: #db469b;
+    border: 1px solid #db469b;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+}
+.vent{
+    display: none;
+    position: absolute;
+    background: #dbd6d6;
+    color: black;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    font-size: 1em;
+    border: 2px solid black;
+    border-radius: 25px;
+    width: 50%;
+    padding: 50px 20px;
+    left: 23.5%;
+    bottom: 5%;
+}
+.em7{
+    text-align: center;
+    font-size: 0.7em;
+    margin-top: 1px;
+}
+.centro{
+    text-align: center;
+    margin-bottom: 1px;
+}
+.izquierda{
+    text-align: left;
+    margin-bottom: 1px;
+}
+.titulo{
+    display: block;
+    background: #db469b;
+    text-align: center;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    margin: 30px 0;
+    padding: 10px;
+    font-size: 1.3em;
+    right: 0;
+    left: 0;
+}
+.helados{
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 15%;
+    width: 70%;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.helados:hover{
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+}
+footer{
+    background: #1c9280;
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+main{
+    padding-top: 13rem;
+    padding-bottom: 5rem;
+}
+@media only screen and (max-width: 900px) {
+    body{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        border-radius: 5px;
+        margin-right: 20px;
+        padding: 0.5rem;
+        transition: all 0.5s linear;
+    }
+    .menu-icon:hover{
+        background: #db469b;
+        box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    }
+    .navigation{
+        width: 100%;
+        margin-top: 1rem;   
+    }
+    .navigation ul{
+        display: none;
+    }
+    .navigation ul.show{
+        display: block;
+    }
+        .navigation ul li {
+            display: block;
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            border-radius: 5px;
+            margin-left: 50%;
+            transition: all 0.5s linear;
+        }
+        .navigation ul li a:hover {
+            background: #db469b;
+            box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+        }
+    main{
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: 12rem;
+    }
+    section{
+        margin-top: 0;
+        padding-top: 50px;
+    }
+    .texto{
+        width: 75%;
+    }
+    .espacio{
+        display: block;
+    }
+    .logoimagen{
+        width: 85px;
+        margin-left: 15px;
+    }
+    .logo{
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+    .ventana{
+        width: 70%;
+        left: 11%;
+    }
+    .formulario{
+        width: 90%;
+        left: 0;
+        top: 0;
+    }
+    footer ul li{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        width: 50%;
+    }
+    .espaciado1{
+        display: inline-block;
+    }
+    .espaciado{
+        display: none;
+    }
+    .boton3 a{
+        width: 20%;
+        margin-left: 40%;
+    }
+    .enlaces ul li a{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    footer .boton2{
+        width: 46%;
+        margin-left: 27%;;
+    }
+    .boton3 ul li{
+        display: inline-block;
+        margin-left: 2.5rem;
+    }
+}
