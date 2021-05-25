@@ -4,8 +4,6 @@
     Author     : 52554
 --%>
 
-<%@page import="Modelo.Helados"%>
-<%@page import="Control.AccionesHelado"%>
 <%@page contentType="text/html" pageEncoding="UTF-8" language="java" import="java.sql.*, java.util.*, java.text.*" %>
 <!DOCTYPE html>
 <html>
@@ -42,28 +40,7 @@
         <section>
             <main>
 
-                <%
-                    List<Helados> lista = AccionesHelado.listarHelados();
-                    for (Helados h : lista) {
-                %>
-
-                <div class="producto">
-
-                    <image src = "images/unicornio.png" class="helados"></image>
-                    <div class="precios">
-                        <form name="formularioCompra" onsubmit="return validarCompra(this)">
-                            <p class="izquierda">Helado: <%= h.getHelado() %></p>
-                            <p class="izquierda"> Precio: $<%= h.getPrecio() %> </p>
-                            <p class="izquierda">Precio Mayoreo: $<%= h.getPrecioMayoreo() %> </p>
-                            <p class="em7">Arriba de 50L precio mayoreo</p>
-                            <a href="FormularioCompra.jsp?id=<%= h.getId() %>" name="heladoComprar" class="boton">Comprar</a>
-                        </form>
-                    </div>
-                </div>
-
-                <%
-                    }
-                %>
+                
 
             </main>
         </section>

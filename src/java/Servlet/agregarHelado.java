@@ -1,6 +1,10 @@
 package Servlet;
 
 import Control.AccionesHelado;
+import Control.AccionesPromociones;
+import Modelo.Helado;
+import Modelo.Presentaciones;
+import Modelo.Promociones;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -8,36 +12,61 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author addRian
- */
-public class BorrarHelado extends HttpServlet {
+public class agregarHelado extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+
+            int id, precio;
+            String nombreH;
+            String pre1, pre2, pre3, pre4, pre5;
+            String p1, p2, p3, p4, p5, p6;
+
+            nombreH = request.getParameter("nombreHelado");
+            precio = Integer.parseInt(request.getParameter("precio100gr"));
+            pre1 = request.getParameter("Cono");
+            pre2 = request.getParameter("Cubeta");
+            pre3 = request.getParameter("Bote de helado");
+            pre4 = request.getParameter("Barquillo");
+            pre5 = request.getParameter("Vaso");
+            p1 = request.getParameter("2 X 1 (Todas las presentaciones)");
+            p2 = request.getParameter("3 X 1 (Todas las presentaciones)");
+            p3 = request.getParameter("A partir de $1000 se obtiene un descuento de 30%");
+            p4 = request.getParameter("A partir de $10000 se obtiene un descuento de 50%");
+            p5 = request.getParameter("A partir de $200 se obtiene un descuento de 10%");
+            p6 = request.getParameter("A partir de $600 se obtiene un descuento de 20%");
             
-            int id = Integer.parseInt(request.getParameter("id"));
+            Helado h = new Helado();
+            Promociones pro = new Promociones();
+            Presentaciones pre = new Presentaciones();
             
-            int state = AccionesHelado.borrarHelado(id);
+            h.setNombre(nombreH);
+            h.setIdprecio(precio);
             
-            if(state > 0){
+            pre.setPre1(pre1);
+            pre.setPre2(pre2);
+            pre.setPre3(pre3);
+            pre.setPre4(pre4);
+            pre.setPre5(pre5);
+
+            pro.setNombreHP(nombreH);
+            pro.setP1(p1);
+            pro.setP2(p2);
+            pro.setP3(p3);
+            pro.setP4(p4);
+            pro.setP5(p5);
+            pro.setP6(p6);
+            
+            int state = AccionesHelado.agregarHelado(h, pro, pre);
+            
+            if (state > 0) {
                 response.sendRedirect("Administrador.jsp");
-            }else{
+            } else {
                 response.sendRedirect("error.html");
             }
-            
+
         }
     }
 

@@ -86,7 +86,7 @@ function InicioAdmin(){
 }
 
 function agregarHelado(){
-    location.href = './AddHelado.html';
+    location.href = './AddHelado.jsp';
 }
 
 function Catalogo(){

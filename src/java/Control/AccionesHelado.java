@@ -1,135 +1,58 @@
 package Control;
 
+import Modelo.Helado;
+import Modelo.Presentaciones;
+import Modelo.Promociones;
 import java.sql.*;
 import java.util.*;
-import Modelo.Helados;
 
 public class AccionesHelado {
-    
-    public static int agregarHelado(Helados h){
-        
-        int state = 0;
-        
-        try{
-            
-            Connection con = Conexion.getConnection();
-            
-            String q = "insert into inventario (nombreH, precio, precioMayoreo, cantidadGeneral)"
-                    + "values(?, ?, ?, ?)";
-            
-            PreparedStatement ps = con.prepareStatement(q);
-            
-            ps.setString(1, h.getHelado());
-            ps.setInt(2, h.getPrecio());
-            ps.setInt(3, h.getPrecioMayoreo());
-            ps.setInt(4, h.getCantidadGeneral());
-            
-            state = ps.executeUpdate();
-            System.out.println("Registro exitoso");
-            con.close();
-            
-        }catch(Exception ed){
-            System.out.println("Error al agregar helado");
-            System.out.println(ed.getMessage());
-        }
-        return state;
-        
-    }
-    
-    public static int editarHelado(Helados h){
-        
-        int state = 0;
-        
-        try{
-            
-            Connection con = Conexion.getConnection();
-            
-            String q = "update inventario set nombreH = ?, precio = ?, precioMayoreo = ?, cantidadGeneral = ?"
-                    + " where idH = ?";
-            
-            PreparedStatement ps = con.prepareStatement(q);
-            
-            ps.setString(1, h.getHelado());
-            ps.setInt(2, h.getPrecio());
-            ps.setInt(3, h.getPrecioMayoreo());
-            ps.setInt(4, h.getCantidadGeneral());
-            ps.setInt(5, h.getId());
-            
-            state = ps.executeUpdate();
-            System.out.println("Los datos del helado se editaron correctamente");
-            con.close();
-            
-        }catch(Exception ed){
-            System.out.println("Error al editar los datos del helado");
-            System.out.println(ed.getMessage());
-        }
-        return state;
-    }
-    
-    public static Helados buscarHeladoById(int id){
-        
-        Helados h = new Helados();
-        
-        try{
-            
-            Connection con = Conexion.getConnection();
-            String q = "select * from inventario where idH = ?";
-            
-            PreparedStatement ps = con.prepareStatement(q);
-            
-            ps.setInt(1, id);
-            
-            ResultSet rs = ps.executeQuery();
-            
-            if(rs.next()){
-                h.setId(rs.getInt(1));
-                h.setHelado(rs.getString(2));
-                h.setPrecio(rs.getInt(3));
-                h.setPrecioMayoreo(rs.getInt(4));
-                h.setCantidadGeneral(rs.getInt(5));
-            }
-            
-            System.out.println("Consulta del helado exitoso");
-            con.close();
-        }catch(Exception ed){
-            System.out.println("Error a la consulta un helado");
-            System.out.println(ed.getMessage());
-        }
-        return h;
-    }
-    
-    public static int borrarHelado(int id){
-        
-        int state = 0;
-        
-        try{
-            
-            Connection con = Conexion.getConnection();
-            String q = "delete from inventario where idH = ?";
-            
-            PreparedStatement ps = con.prepareStatement(q);
-            
-            ps.setInt(1, id);
-            
-            state = ps.executeUpdate();
-            System.out.println("Se elimino el helado con exito");
-            con.close();
-            
-        }catch(Exception ed){
-            System.out.println("Error al borrar el helado");
-            System.out.println(ed.getMessage());
-        }
-        return state;
-    }
 
-    public static List<Helados> listarHelados() {
+    public static int agregarHelado(Helado h, Promociones prom, Presentaciones pre){
+        
+        int state = 0;
+        
+        try{ 
+            
+            Connection con = Conexion.getConnection();
+            
+            String q = "{call AgregarHeladoD(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+            
+            CallableStatement proc = con.prepareCall(q);
+            
+            proc.setString(1, h.getNombre());
+            proc.setInt(2, h.getIdprecio());
+            proc.setString(3, prom.getP1());
+            proc.setString(4, prom.getP2());
+            proc.setString(5, prom.getP3());
+            proc.setString(6, prom.getP4());
+            proc.setString(7, prom.getP5());
+            proc.setString(8, prom.getP6());
+            proc.setString(9, pre.getPre1());
+            proc.setString(10, pre.getPre2());
+            proc.setString(11, pre.getPre3());
+            proc.setString(12, pre.getPre4());
+            proc.setString(13, pre.getPre5());
+            
+            state = proc.executeUpdate();
+            System.out.println("Registro de helado exitoso");
+            con.close();
+            
+        }catch(Exception ed){
+            System.out.println("Error al registrar helado");
+            System.out.println(ed.getMessage());
+        }
+        return state;
+    }
+    
+    public static List<Helado> listarHelados() {
 
-        List<Helados> lista = new ArrayList<Helados>();
+        List<Helado> lista = new ArrayList<Helado>();
 
         try {
 
             Connection con = Conexion.getConnection();
-            String q = "select * from inventario";
+            String q = "select id_producto, tipohelado, precio_producto from mproducto";
 
             PreparedStatement ps = con.prepareStatement(q);
 
@@ -137,13 +60,11 @@ public class AccionesHelado {
 
             while (rs.next()) {
 
-                Helados h = new Helados();
+                Helado h = new Helado();
 
                 h.setId(rs.getInt(1));
-                h.setHelado(rs.getString(2));
-                h.setPrecio(rs.getInt(3));
-                h.setPrecioMayoreo(rs.getInt(4));
-                h.setCantidadGeneral(rs.getInt(5));
+                h.setNombre(rs.getString(2));
+                h.setIdprecio(rs.getInt(3));
                 lista.add(h);
 
             }
@@ -157,5 +78,5 @@ public class AccionesHelado {
         }
         return lista;
     }
-
+    
 }
