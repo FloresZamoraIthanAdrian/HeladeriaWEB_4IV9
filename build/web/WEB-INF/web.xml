@@ -8,6 +8,14 @@
         <servlet-name>agregarHelado</servlet-name>
         <servlet-class>Servlet.agregarHelado</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BorrarHelado</servlet-name>
+        <servlet-class>Modelo.BorrarHelado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>actualizarHelado</servlet-name>
+        <servlet-class>Servlet.actualizarHelado</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registrarUsuario</servlet-name>
         <url-pattern>/registrarUsuario</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>agregarHelado</servlet-name>
         <url-pattern>/agregarHelado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BorrarHelado</servlet-name>
+        <url-pattern>/BorrarHelado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>actualizarHelado</servlet-name>
+        <url-pattern>/actualizarHelado</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

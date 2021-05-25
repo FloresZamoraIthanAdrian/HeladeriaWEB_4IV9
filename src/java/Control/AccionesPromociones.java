@@ -65,7 +65,7 @@ public class AccionesPromociones {
                 prom.setP6(rs.getString(7));
             }
             
-            System.out.println("Error al listar promociones disponibles");
+            System.out.println("listar promociones disponibles");
             con.close();
             
         }catch(Exception ed){

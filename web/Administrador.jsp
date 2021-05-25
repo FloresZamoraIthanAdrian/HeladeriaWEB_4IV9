@@ -138,12 +138,12 @@
                             <thead>
                             <th>
                             <td>
-                                <a href="" name="" class="boton">Editar</a>
+                                <a href="EditarHelado.jsp?id=<%= h.getId()  %>" name="" class="boton">Editar</a>
                             </td>
                             </th>
                             <th>
                             <td>
-                                <a href="" name="" class="boton">Borrar</a>
+                                <a href="BorrarHelado?id=<%= h.getId() %>" name="" class="boton">Borrar</a>
                             </td>
                             </th>
                             </thead>
