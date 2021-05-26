@@ -19,13 +19,14 @@ public class agregarHelado extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 
-            int id, precio;
+            int id, precio, stock;
             String nombreH;
             String pre1, pre2, pre3, pre4, pre5;
             String p1, p2, p3, p4, p5, p6;
 
             nombreH = request.getParameter("nombreHelado");
             precio = Integer.parseInt(request.getParameter("precio100gr"));
+            stock = Integer.parseInt(request.getParameter("stock"));
             pre1 = request.getParameter("Cono");
             pre2 = request.getParameter("Cubeta");
             pre3 = request.getParameter("Bote de helado");
@@ -44,6 +45,7 @@ public class agregarHelado extends HttpServlet {
             
             h.setNombre(nombreH);
             h.setIdprecio(precio);
+            h.setStock_gramos(stock);
             
             pre.setPre1(pre1);
             pre.setPre2(pre2);

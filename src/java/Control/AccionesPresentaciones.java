@@ -28,6 +28,7 @@ public class AccionesPresentaciones {
                 pp.setId(rs.getInt(1));
                 pp.setPresentacion(rs.getString(2));
                 pp.setPrecioPresentacion(rs.getInt(3));
+                pp.setCantidad_presentacion(rs.getInt(4));
                 lista.add(pp);
 
             }

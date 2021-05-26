@@ -48,8 +48,8 @@
                     <input id="inputXD" type="text" onkeypress="return validarNumeros(event)" name = "telefono_Particular" class="formulario__input" placeholder="Telefono particular">
                     <input id="inputXD" type="text" onkeypress="return validarNumeros(event)" name = "telefono_Celular" class="formulario__input" placeholder="Telefono celular">
                     <input id="inputXD" type="text" onkeypress="return validarAlfaNumericos(event)" name = "domicilio" class="formulario__input" placeholder="Domicilio">
-                    <input id="password" type="text" onkeypress="return validarAlfaNumericos(event)" name = "contrasena" class="formulario__input" placeholder="Contraseña (6 caracteres mínimo)">
-                    <input id="password2" type="text" onkeypress="return validarAlfaNumericos(event)" name = "verificarContrasena" class="formulario__input" placeholder="Verificar Contraseña">
+                    <input id="password" type="password" onkeypress="return validarAlfaNumericos(event)" name = "contrasena" class="formulario__input" placeholder="Contraseña (6 caracteres mínimo)">
+                    <input id="password2" type="password" onkeypress="return validarAlfaNumericos(event)" name = "verificarContrasena" class="formulario__input" placeholder="Verificar Contraseña">
 
                     <p class = "centro">Estoy deacuerdo con <a href="javascript:abrir()">Términos y Condiciones <i class="far fa-check-square"></i></a></p>
 

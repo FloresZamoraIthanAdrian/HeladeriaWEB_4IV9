@@ -4,7 +4,7 @@ public class Presentaciones {
 
     private int id;
     private String presentacion, pre1, pre2, pre3, pre4, pre5;
-    private int precioPresentacion;
+    private int precioPresentacion, cantidad_presentacion;
 
     public int getId() {
         return id;
@@ -68,6 +68,14 @@ public class Presentaciones {
 
     public void setPrecioPresentacion(int precioPresentacion) {
         this.precioPresentacion = precioPresentacion;
+    }
+
+    public int getCantidad_presentacion() {
+        return cantidad_presentacion;
+    }
+
+    public void setCantidad_presentacion(int cantidad_presentacion) {
+        this.cantidad_presentacion = cantidad_presentacion;
     }
 
 }

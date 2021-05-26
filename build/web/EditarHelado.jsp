@@ -26,7 +26,7 @@
     <body>
         <header>
             <div class = "container logo-nav-container">
-                <image class = "logoimagen" src = "./images/logo.png" alt = "No se porque no carga :c" title = "Heladería Internacional"><a href="#" class = "logo">Agregar <div class="espacio"></div>Helado</a></image>
+                <image class = "logoimagen" src = "./images/logo.png" alt = "No se porque no carga :c" title = "Heladería Internacional"><a href="#" class = "logo">Editar <div class="espacio"></div>Helado</a></image>
                 <span class="menu-icon">Ver Menú  <i class="fas fa-chevron-down"></i></span>
                 <nav class = "navigation">
                     <ul>
@@ -51,6 +51,7 @@
                     <input type="hidden" name="id2" value="<%= h.getId() %>">
                     <input value="<%= h.getNombre() %>" type="text" name="nombreHelado" readonly onkeypress="return validarLetras(event)" class="formulario__input" > 
                     <input value="<%= h.getIdprecio() %>" id="inputXD" type="number" min="1" onkeypress="return validarNumeros(event)" name = "precio100gr" class="formulario__input" placeholder="Precio por 100gr">
+                    <input value="<%= h.getStock_gramos() %>" id="inputXD" type="number" min="1" onkeypress="return validarNumeros(event)" name = "stcokEditar" class="formulario__input" placeholder="Stock en gramos">
                     
                     <h4 style="font-size:20px;" class="formulario__titulo">Presentaciones disponibles</h4>
                     
@@ -60,7 +61,7 @@
                     %>
                     
                     <input style="margin-left: 25px; font-size: 20px" class="form-check-input" type="checkbox" id="<%= pp.getId() %>" name="<%= pp.getPresentacion() %>" value="1">
-                    <label style="margin-left: 25px; font-size: 20px" class="form-check-label" style="font-size: 20px;" for="<%= pp.getPresentacion() %>"> <%= pp.getPresentacion() %> $<%= pp.getPrecioPresentacion() %>C/U </label><br>
+                    <label style="margin-left: 25px; font-size: 20px" class="form-check-label" style="font-size: 20px;" for="<%= pp.getPresentacion() %>"> <%= pp.getPresentacion() %> - Cantidad(gr): <%= pp.getCantidad_presentacion() %></label><br>
                     
                     <%
                         }

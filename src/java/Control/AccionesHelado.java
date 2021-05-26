@@ -16,7 +16,7 @@ public class AccionesHelado {
             
             Connection con = Conexion.getConnection();
             
-            String q = "{call AgregarHeladoD(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+            String q = "{call AgregarHeladonwn(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
             
             CallableStatement proc = con.prepareCall(q);
             
@@ -33,6 +33,7 @@ public class AccionesHelado {
             proc.setString(11, pre.getPre3());
             proc.setString(12, pre.getPre4());
             proc.setString(13, pre.getPre5());
+            proc.setInt(14, h.getStock_gramos());
             
             state = proc.executeUpdate();
             System.out.println("Registro de helado exitoso");
@@ -52,7 +53,7 @@ public class AccionesHelado {
         try {
 
             Connection con = Conexion.getConnection();
-            String q = "select id_producto, tipohelado, precio_producto from mproducto";
+            String q = "select id_producto, tipohelado, precio_producto, stock_producto from mproducto";
 
             PreparedStatement ps = con.prepareStatement(q);
 
@@ -65,6 +66,7 @@ public class AccionesHelado {
                 h.setId(rs.getInt(1));
                 h.setNombre(rs.getString(2));
                 h.setIdprecio(rs.getInt(3));
+                h.setStock_gramos(rs.getInt(4));
                 lista.add(h);
 
             }
@@ -111,7 +113,8 @@ public class AccionesHelado {
         try{
             
             Connection con = Conexion.getConnection();
-            String q = "select id_producto, tipohelado, precio_producto from mproducto where id_producto = ?";
+            String q = "select id_producto, tipohelado, precio_producto, stock_producto"
+                    + " from mproducto where id_producto = ?";
             
             PreparedStatement ps = con.prepareStatement(q);
             
@@ -123,6 +126,7 @@ public class AccionesHelado {
                 h.setId(rs.getInt(1));
                 h.setNombre(rs.getString(2));
                 h.setIdprecio(rs.getInt(3));
+                h.setStock_gramos(rs.getInt(4));
             }
             
             System.out.println("Exito al buscar el helado por el ID");
@@ -143,7 +147,7 @@ public class AccionesHelado {
             
             Connection con = Conexion.getConnection();
             
-            String q = "{call editarHelado(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+            String q = "{call editarHeladonwn(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
             
             CallableStatement proc = con.prepareCall(q);
             
@@ -160,6 +164,7 @@ public class AccionesHelado {
             proc.setString(11, prom.getP4());
             proc.setString(12, prom.getP5());
             proc.setString(13, prom.getP6());
+            proc.setInt(14, h.getStock_gramos());
             
             state = proc.executeUpdate();
             System.out.println("Helado actualizado con exito");

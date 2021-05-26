@@ -43,7 +43,7 @@
                     <h4 class="formulario__titulo">Agregar Helado</h4>
                     <input type="text" name="nombreHelado" placeholder="Nombre del helado" onkeypress="return validarLetras(event)" class="formulario__input" > 
                     <input id="inputXD" type="number" min="1" onkeypress="return validarNumeros(event)" name = "precio100gr" class="formulario__input" placeholder="Precio por 100gr">
-                    
+                    <input id="inputXD" type="number" min="1" onkeypress="return validarNumeros(event)" name = "stock" class="formulario__input" placeholder="Stock a agregar en gramos">
                     <h4 style="font-size:20px;" class="formulario__titulo">Presentaciones disponibles</h4>
                     
                     <%

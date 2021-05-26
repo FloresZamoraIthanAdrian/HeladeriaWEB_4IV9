@@ -57,7 +57,7 @@
                         <p class="centro">Helado de <%= h.getNombre()%></p>
                         <p style="padding-left: 16px;">Precio: $<%= h.getIdprecio()%> por 100 gramos</p>
 
-                        <p style="padding-left: 16px; padding-bottom: 0; margin-bottom: 0;">Disponibilidad</p>
+                        <p style="padding-left: 16px; padding-bottom: 0; margin-bottom: 0;">Stock (Gramos): <%= h.getStock_gramos() %> </p>
 
                         <select name="" class="formulario__input">
 
@@ -74,10 +74,12 @@
 
                                 String[] presDisp = {val1, val2, val3, val4, val5};
                                 String[] presNames = new String[5];
-
+                                int[] presPres = new int[5];
+                                
                                 int i = 0;
                                 for (Presentaciones pre : lista2) {
                                     presNames[i] = pre.getPresentacion();
+                                    presPres[i] = pre.getCantidad_presentacion();
                                     if (presDisp[i] == null) {
                                         presDisp[i] = "No Disponible";
                                     } else {
@@ -87,11 +89,11 @@
                                 }
                             %>
 
-                            <option value=""> <%= presNames[0]%> - (<%= presDisp[0]%>) </option>
-                            <option value=""> <%= presNames[1]%> - (<%= presDisp[1]%>) </option>
-                            <option value=""> <%= presNames[2]%> - (<%= presDisp[2]%>) </option>
-                            <option value=""> <%= presNames[3]%> - (<%= presDisp[3]%>) </option>
-                            <option value=""> <%= presNames[4]%> - (<%= presDisp[4]%>) </option>
+                            <option value=""> <%= presNames[0]%> - (<%= presDisp[0]%>) - <%= presPres[0] %>(gr) </option>
+                            <option value=""> <%= presNames[1]%> - (<%= presDisp[1]%>) - <%= presPres[1] %>(gr) </option>
+                            <option value=""> <%= presNames[2]%> - (<%= presDisp[2]%>) - <%= presPres[2] %>(gr)</option>
+                            <option value=""> <%= presNames[3]%> - (<%= presDisp[3]%>) - <%= presPres[3] %>(gr)</option>
+                            <option value=""> <%= presNames[4]%> - (<%= presDisp[4]%>) - <%= presPres[4] %>(gr)</option>
 
                         </select>
 

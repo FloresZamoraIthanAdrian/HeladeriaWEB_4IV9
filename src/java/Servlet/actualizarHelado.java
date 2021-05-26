@@ -20,11 +20,12 @@ public class actualizarHelado extends HttpServlet {
 
             int id = Integer.parseInt(request.getParameter("id2"));
             
-            int precio;
+            int precio, stock;
             String pre1, pre2, pre3, pre4, pre5;
             String p1, p2, p3, p4, p5, p6;
 
             precio = Integer.parseInt(request.getParameter("precio100gr"));
+            stock = Integer.parseInt(request.getParameter("stcokEditar"));
             pre1 = request.getParameter("Cono");
             pre2 = request.getParameter("Cubeta");
             pre3 = request.getParameter("Bote de helado");
@@ -43,6 +44,7 @@ public class actualizarHelado extends HttpServlet {
             
             h.setId(id);
             h.setIdprecio(precio);
+            h.setStock_gramos(stock);
             
             pre.setPre1(pre1);
             pre.setPre2(pre2);
