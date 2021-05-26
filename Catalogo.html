@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Catálogo</title>
+    <title>Helados</title>
     <link rel="icon" href= "images/icon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@300&display=swap" rel="stylesheet">
@@ -20,9 +20,9 @@
 <body>
     <header>
         <div class = "container logo-nav-container">
-            <image class = "logoimagen" src = "images/logo.png" alt = "No se porque no carga :c" title = "Heladería Internacional"><a href="#" class = "logo"> Catálogo</a></image>
+            <image class = "logoimagen" src = "images/logo.png" alt = "No se porque no carga :c" title = "Heladería Internacional"><a href="#" class = "logo"> Helados</a></image>
             <span class="menu-icon">Ver Menú  <i class="fas fa-chevron-down"></i></span>
-            <nav class = "navigation">
+            <nav>
                 <ul>
                     <li onclick = "javascript:Carrito()"><i class="fas fa-shopping-cart"></i> Ver Carrito</li>
                 </ul>
@@ -30,457 +30,83 @@
         </div>
     </header>
     <section>
-        <div id="volver"></div>
         <main>
-            <div class="enlaces">
-                <div class="boton3">
-                    <ul>
-                        <li><a href="#frutas">Frutas</a></li>
-                        <li><a href="#chocolate">Chocolate</a></li>
-                        <li><a href="#crema">Crema</a></li>
-                        <li><a href="#especial">Especiales</a></li>
-                        <li><a href="#cafe"">Cafés</a></li>
-                        <li><a href="#otros">Otros</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="titulo">¡Los Helados Top Ventas!</div>
-            <div class="espaciado"></div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/fresa.png" class="helados"></image>
+            <div class="cuadro_producto">
+                <image class="helados" src = "images/fresa.png" title="Helado" alt = "No se porque no carga"></image>
                 <div class="precios">
-                    <p class="centro">Helado de Fresa</p>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
+                    <p class="centro"><i>Nombre del helado</i></p>
+                    <p class="centro2">
+                        <i>Descripcion</i>
+                    </p>
+                    <p class="centro2">
+                        precio: $X.XX
+                    </p>
+                    <button class="boton2">Comprar</button>
                 </div>
             </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/chocolate.png" class="helados"></image>
+            <div class="cuadro_producto">
+                <image class="helados" src = "images/fresa.png" title="Helado" alt = "No se porque no carga"></image>
                 <div class="precios">
-                    <p class="centro">Helado de Chocolate</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
+                    <p class="centro"><i>Nombre del helado</i></p>
+                    <p class="centro2">
+                        <i>Descripcion</i>
+                    </p>
+                    <p class="centro2">
+                        precio: $X.XX
+                    </p>
+                    <button class="boton2">Comprar</button>
                 </div>
             </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/vainilla.png" class="helados"></image>
+            <div class="cuadro_producto">
+                <image class="helados" src = "images/fresa.png" title="Helado" alt = "No se porque no carga"></image>
                 <div class="precios">
-                    <p class="centro">Helado de Vanilla</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
+                    <p class="centro"><i>Nombre del helado</i></p>
+                    <p class="centro2">
+                        <i>Descripcion</i>
+                    </p>
+                    <p class="centro2">
+                        precio: $X.XX
+                    </p>
+                    <button class="boton2">Comprar</button>
                 </div>
             </div>
-            <div class="espaciado"></div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/napolitano.png" class="helados"></image>
+            <div class="cuadro_producto">
+                <image class="helados" src = "images/fresa.png" title="Helado" alt = "No se porque no carga"></image>
                 <div class="precios">
-                    <p class="centro">Helado de Napolitano</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
+                    <p class="centro"><i>Nombre del helado</i></p>
+                    <p class="centro2">
+                        <i>Descripcion</i>
+                    </p>
+                    <p class="centro2">
+                        precio: $X.XX
+                    </p>
+                    <button class="boton2">Comprar</button>
                 </div>
             </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/oreo.png" class="helados"></image>
+            <div class="cuadro_producto">
+                <image class="helados" src = "images/fresa.png" title="Helado" alt = "No se porque no carga"></image>
                 <div class="precios">
-                    <p class="centro">Helado de Oreo</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
+                    <p class="centro"><i>Nombre del helado</i></p>
+                    <p class="centro2">
+                        <i>Descripcion</i>
+                    </p>
+                    <p class="centro2">
+                        precio: $X.XX
+                    </p>
+                    <button class="boton2">Comprar</button>
                 </div>
             </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/chocomenta.png" class="helados"></image>
+            <div class="cuadro_producto">
+                <image class="helados" src = "images/fresa.png" title="Helado" alt = "No se porque no carga"></image>
                 <div class="precios">
-                    <p class="centro">Helado de Chocomenta</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7" id="frutas">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="titulo">¡Los Helados de Frutas!
-                <div class="boton3">
-                    <a href="#volver">Volver</a>
-                </div>
-            </div>
-            <div class="espaciado"></div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/cereza.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Cereza</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/fresa.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Fresa</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/mamey.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Mamey</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado"></div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/frutosrojos.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Frutos Rojos</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/limon.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Limon</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/mango.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Mango</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado"></div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/mandarina.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Mandarina</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/coco.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Coco</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/guayaba.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Guayaba</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7" id="chocolate">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="titulo">¡Más Chocolate!
-                <div class="boton3">
-                    <a href="#volver">Volver</a>
-                </div>
-            </div>
-            <div class="espaciado"></div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/chocolate.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Chocolate</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/chocolateblanco.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Chocolate Blanco</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/chocolate.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Chocolate Amargo</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado"></div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/chocolate.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Trufas</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/ferrero.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Ferrero Rocher</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/chocolate.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Chocolate Carlos V</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7" id="crema">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="titulo">¡Helados con Crema!
-                <div class="boton3">
-                    <a href="#volver">Volver</a>
-                </div>
-            </div>
-            <div class="espaciado"></div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/fresascrema.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Fresas Con Crema</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/frambuesa.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Frambuesa Con Crema</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/zarzamora.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Zarzamora Con Crema</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7" id="especial">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="titulo">¡Nuestra Especialidad!
-                <div class="boton3">
-                    <a href="#volver">Volver</a>
-                </div>
-            </div>
-            <div class="espaciado"></div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/unicornio.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado Unicornio</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/ferrero.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Ferrero Rocher</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/galaxy.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado Galaxy</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7" id="cafe">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="titulo">¡Helados de Café!
-                <div class="boton3">
-                    <a href="#volver">Volver</a>
-                </div>
-            </div>
-            <div class="espaciado"></div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/cafe.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Café</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/cappuccino.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Cappuccino</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/cafevanilla.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Café y Vanilla</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7" id="otros">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="titulo">¡Nuestra Variedad!
-                <div class="boton3">
-                    <a href="#volver">Volver</a>
-                </div>
-            </div>
-            <div class="espaciado"></div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/chicle.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Chicle</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/chessecake.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Chesse Cake</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/almendra.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Almendras</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado"></div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/avellana.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Avellana</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/caramelo.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Caramelo</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
-                </div>
-            </div>
-            <div class="espaciado1"></div>
-            <div class="producto">
-                <image src = "images/helados/dulceleche.png" class="helados"></image>
-                <div class="precios">
-                    <p class="centro">Helado de Dulce de Leche</p></li>
-                    <p class="izquierda">Precio: $40 por Litro</p>
-                    <p class="izquierda">Precio Mayoreo: $30 por Litro</p>
-                    <p class="em7">Arriba de 50L precio mayoreo</p>
-                    <input type="submit" name = "Comprar" value="Comprar" onclick="javascript:Formulario()" class="boton">
+                    <p class="centro"><i>Nombre del helado</i></p>
+                    <p class="centro2">
+                        <i>Descripcion</i>
+                    </p>
+                    <p class="centro2">
+                        precio: $X.XX
+                    </p>
+                    <button class="boton2">Comprar</button>
                 </div>
             </div>
         </main>

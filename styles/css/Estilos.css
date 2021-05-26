@@ -20,6 +20,13 @@ p{
 }
 .centro{
     text-align: center;
+    font-size: 1em;
+    margin-bottom: 5px;
+    border-bottom: 2px solid black;
+}
+.centro2{
+    text-align: center;
+    font-size: 0.8em;
 }
 .texto{
     background: rgb(28, 146, 128);
@@ -73,11 +80,11 @@ header a{
     align-items: center;
     z-index: 10;
 }
-.navigation ul{
+nav ul{
     cursor: pointer;
     list-style: none;
 }
-    .navigation ul li {
+    nav ul li {
         display: inline-block;
         font-family: 'Comic Neue', cursive;
         border-radius: 5px;
@@ -85,7 +92,7 @@ header a{
         padding: 0.5rem 0.5rem;
         transition: all 0.4s linear;
     }
-    .navigation ul li:hover {
+    nav ul li:hover {
         background: #db469b;
         box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
     }
@@ -156,35 +163,33 @@ header a{
     height: 400px;
     margin-top: 40px;
 }
-.producto{
+.cuadro_producto{
     display: inline-block;
     position: relative;
-    background: rgba(28, 146, 128, 0.9);
-    color: black;
-    border-radius: 35px;
-    border: 2px solid black;
-    width: 300px;
-    height: 500px;
-    margin: 15px;
-    transition: all 0.3s;
-}
-.producto:hover{
+    width: 25%;
+    height: 100%;
+    background: #1c9280; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1c9280 0%, #db469b 85%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #1c9280 0%,#db469b 85%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #1c9280 0%,#db469b 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c9280', endColorstr='#db469b',GradientType=0 ); /* IE6-9 */
+    margin-bottom: 25px;
+    margin-left: 6%;
+    border-radius: 10px;
     box-shadow: 0 0 20px 1px rgba(0,0,0,0.7);
-    border: 2px solid rgba(28, 146, 128, 0.9);
+    transition: all 1s;
 }
+    .cuadro_producto:hover{
+        background: #db469b;
+        background: -moz-linear-gradient(top,  #db469b 15%, #1c9280 100%);
+        background: -webkit-linear-gradient(top,  #db469b 15%,#1c9280 100%); 
+        background: linear-gradient(to bottom,  #db469b 15%,#1c9280 100%); 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db469b', endColorstr='#1c9280',GradientType=0 );
+    }
 .precios{
-    border: 2px solid black;
-    border-radius: 25px;
-    background: rgba(219,70,155,0.8);
-    padding: 5px;
-    width: 90%;
-    height: 45%;
-    margin: 0 auto;
+    margin: 0 25px;
     margin-top: 85%;
-    transition: all 0.4s;
-}
-.precios:hover{
-    box-shadow: 0 0 20px 1px rgba(0,0,0,0.7);
+    margin-bottom: 35px;
 }
 .boton{
     cursor: pointer;
@@ -211,8 +216,8 @@ header a{
     border: 1px solid #1c9280;
     color: white;
     border-radius: 5px;
-    width: 34%;
-    margin-left: 33%;
+    width: 50%;
+    margin-left: 25%;
     margin-top: 5px;
     padding: 0.5rem;
     transition: all 0.4s linear;
@@ -300,14 +305,10 @@ header a{
 }
 .helados{
     position: absolute;
-    margin-top: 5%;
-    margin-left: 15%;
-    width: 70%;
+    width: 60%;
     border-radius: 50%;
-    transition: all 0.5s;
-}
-.helados:hover{
-    box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+    left: 20%;
+    top: 30px;
 }
 footer{
     background: #1c9280;
@@ -336,17 +337,17 @@ main{
         background: #db469b;
         box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
     }
-    .navigation{
+    nav{
         width: 100%;
         margin-top: 1rem;   
     }
-    .navigation ul{
+    nav ul{
         display: none;
     }
-    .navigation ul.show{
+    nav ul.show{
         display: block;
     }
-        .navigation ul li {
+        nav ul li {
             display: block;
             text-align: center;
             font-family: Georgia, 'Times New Roman', Times, serif;
@@ -354,7 +355,7 @@ main{
             margin-left: 50%;
             transition: all 0.5s linear;
         }
-        .navigation ul li a:hover {
+        nav ul li a:hover {
             background: #db469b;
             box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
         }
@@ -414,5 +415,13 @@ main{
     .boton3 ul li{
         display: inline-block;
         margin-left: 2.5rem;
+    }
+    .cuadro_producto{
+        width: 40%;
+        margin-left: 5%;
+    }
+    .boton2{
+        width: 80%;
+        margin-left: 10%;
     }
 }
