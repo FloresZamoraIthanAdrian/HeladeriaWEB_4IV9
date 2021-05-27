@@ -57,7 +57,7 @@ public class registrarUsuario extends HttpServlet {
             int state = AccionesUsuario.registrarUsuario(u);
             
             if(state > 0){
-                response.sendRedirect("IniciarSesion.html");
+                response.sendRedirect("iniciarSesion.jsp");
             }else{
                 response.sendRedirect("error.html");
             }

@@ -106,7 +106,7 @@ public class AccionesHelado {
         return state;
     }
     
-    public static Helado buscarHeladoId(int id){
+    public static Helado buscarHeladoId(int id_h){
         
         Helado h = new Helado();
         
@@ -118,7 +118,7 @@ public class AccionesHelado {
             
             PreparedStatement ps = con.prepareStatement(q);
             
-            ps.setInt(1, id);
+            ps.setInt(1, id_h);
             
             ResultSet rs = ps.executeQuery();
             

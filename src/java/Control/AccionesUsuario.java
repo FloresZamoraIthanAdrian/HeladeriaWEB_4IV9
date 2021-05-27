@@ -41,7 +41,7 @@ public class AccionesUsuario {
         return state;
     }
     
-    public static Usuario buscarUsuarioId(int id){
+    public static Usuario buscarUsuarioId(int id_usu){
         
         Usuario u = new Usuario();
         
@@ -52,7 +52,7 @@ public class AccionesUsuario {
             
             PreparedStatement ps = con.prepareStatement(q);
             
-            ps.setInt(1, id);
+            ps.setInt(1, id_usu);
             
             ResultSet rs = ps.executeQuery();
             
