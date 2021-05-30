@@ -42,9 +42,13 @@
                             int id_usu = Integer.parseInt(id);
 
                             Usuario u = AccionesUsuario.buscarUsuarioId(id_usu);
+                            
+                            if(u.getUser() != "AdminIceMaster2592"){
+                                out.print("<script>location.replace('iniciarSesion.jsp');alert('Debes iniciar sesion como administrador para acceder a esta pagina');</script>");
+                            }else{
 
-                            out.print("<a class='boton2' style='text-decoration: none;' href='iniciarSesion.jsp?cerrar=true'>Cerrar Sesion</a>");
-
+                                out.print("<a class='boton2' style='text-decoration: none;' href='iniciarSesion.jsp?cerrar=true'>Cerrar Sesion</a>");
+                            }
                         } else {
                             out.print("<script>location.replace('iniciarSesion.jsp');alert('Debes iniciar sesion para acceder a esta pagina');</script>");
                         }

@@ -3,9 +3,6 @@ use heladeria;
 
 show tables;
 
-/*
-CRUD HELADOS DEL LADO DEL ADMNISTRADOR
-*/
 create table mProducto(
 id_producto int not null auto_increment,
 tipohelado varchar(100),
@@ -21,7 +18,6 @@ key(precio_producto)
 
 update mproducto set stock_producto = 350000 where id_producto = 4;
 
-/*Catlogo IN*/
 create table Cpromocion(
 id_promocion int not null auto_increment,
 tipo_promocion varchar(100),
@@ -29,7 +25,6 @@ primary key(id_promocion),
 key(tipo_promocion)
 );
 
-/*Catalogo IN*/
 create table Cpresentacion(
 id_presentacion int not null auto_increment,
 tipo_presentacion varchar(100),
@@ -64,11 +59,14 @@ insert into cpresentacion(tipo_presentacion, precio_presentacion) values ('Cono'
 describe mProducto;
 describe cpromociones_a;
 describe cpresentaciones_a;
+describe dCompra;
 
 select * from Cpresentacion;
+select * from cpromocion;
 select * from mProducto;
 select * from cpromociones_a;
 SELECT * FROM cpresentaciones_a;
+select * from musuario;
 
 create table cpromociones_a(
 id_promociones_a int not null auto_increment,
@@ -133,7 +131,6 @@ delete from cpresentaciones_a where id_presentacion_a = id_borrar;
 END $$
 DELIMITER 
 
-
 DELIMITER $$
 CREATE PROCEDURE editarHeladonwn(
 in id int,
@@ -170,13 +167,6 @@ mayquin = boolns0 where id_promociones_a = id;
 END $$
 DELIMITER 
 
-
-select * from mUsuario;
-
-/*
-Usuario
-*/
-
 create table mUsuario(
 id_usuario	int not null auto_increment,	
 nom_usu varchar(50), 
@@ -191,6 +181,84 @@ domicilio varchar(100),
 cont_usu varchar(50),
 primary key(id_usuario)
 );
+
+DELIMITER $$
+create table ecompra(
+id_compra int not null auto_increment,
+id_usuario int,
+primary key(id_compra)
+);
+
+create table DCompra(
+id_compra int not null auto_increment,
+id_producto int not null,
+id_promocion int,
+id_presentacion int,
+cantidad_p int,
+subtotal float,
+id_ecompra int,
+primary key(id_compra)
+);
+DELIMITER $$
+
+DELIMITER $$
+create table cformaPago(
+id_formaPago int not null,
+tipo_Pago varchar(15) not null,
+primary key(id_formaPago),
+key(tipo_Pago)
+);
+
+DELIMITER $$
+create procedure agregarHeladoCC__nwn__3(
+in id_product int,
+in id_presentacionIn int,
+in cantidad int,
+in id_promo int,
+in usuarioCompra int
+)
+BEGIN
+set @var:= (select stock_producto from mproducto where id_producto = id_product);
+set @cantidad := (select cantidad_presentacion from cpresentacion where id_presentacion = id_presentacionIn);
+set @disponibilidad = @var/@cantidad;
+set @boolDisp := (select IF(@disponibilidad > cantidad, 1, 0));
+set @precio := (select cantidad_presentacion from cpresentacion where id_presentacion = id_presentacionIn);
+set @gramostotales = cantidad * @precio;
+set @reducir = @var - @gramostotales;
+update mproducto set stock_producto = @reducir where id_producto = id_product;
+set @precio100gr := (select precio_producto from mproducto where id_producto = id_product);
+set @numVeces = @gramostotales / 100;
+set @subtotal = @numVeces * @precio100gr;
+insert into Dcompra(id_producto, id_promocion, id_presentacion, cantidad_p, subtotal, id_ecompra)
+select id_product, id_promo, id_presentacionIn, cantidad, @subtotal, usuarioCompra where @boolDisp > 0;
+insert into ecompra (id_usuario) values (usuarioCompra);
+END $$
+DELIMITER 
+
+DELIMITER $$
+create procedure borrarHeladoCarritounu(
+in id_pedidoB int,
+in id_usuarioB int
+)
+BEGIN
+delete from dcompra where id_compra = id_pedidoB and id_ecompra = id_usuarioB;
+END $$
+DELIMITER 
+
+call borrarHeladoCarritounu(7, 5);
+select * from dcompra;
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

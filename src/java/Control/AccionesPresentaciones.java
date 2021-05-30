@@ -33,7 +33,7 @@ public class AccionesPresentaciones {
 
             }
 
-            System.out.println("Consulta de presentaciones exitosa");
+            //System.out.println("Consulta de presentaciones exitosa");
             con.close();
             
         }catch(Exception ed){
@@ -66,11 +66,38 @@ public class AccionesPresentaciones {
                 pre.setPre5(rs.getString(6));
             }
             
-            System.out.println("Error al listar presentaciones disponibles");
+            //System.out.println("Error al listar presentaciones disponibles");
             con.close();
             
         }catch(Exception ed){
             System.out.println("Error al listar presentaciones");
+            System.out.println(ed.getMessage());
+        }
+        return pre;
+    }
+ 
+    public static Presentaciones buscarPresentacionId(int id_Presentacion){
+        
+        Presentaciones pre = new Presentaciones();
+        
+        try{
+            
+            Connection con = Conexion.getConnection();
+            String q = "select tipo_presentacion from cpresentacion where id_presentacion = ?";
+            
+            PreparedStatement ps = con.prepareStatement(q);
+            
+            ps.setInt(1, id_Presentacion);
+            
+            ResultSet rs = ps.executeQuery();
+            
+            if(rs.next()){
+                pre.setPresentacion(rs.getString(1));
+            }
+            con.close();
+            
+        }catch(Exception ed){
+            System.out.println("Error al buscar la promocion");
             System.out.println(ed.getMessage());
         }
         return pre;

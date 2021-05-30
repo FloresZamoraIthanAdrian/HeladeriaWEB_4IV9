@@ -36,7 +36,7 @@ public class AccionesHelado {
             proc.setInt(14, h.getStock_gramos());
             
             state = proc.executeUpdate();
-            System.out.println("Registro de helado exitoso");
+            //System.out.println("Registro de helado exitoso");
             con.close();
             
         }catch(Exception ed){
@@ -71,7 +71,7 @@ public class AccionesHelado {
 
             }
 
-            System.out.println("Consulta de inventario exitosa");
+            //System.out.println("Consulta de inventario exitosa");
             con.close();
 
         } catch (Exception ed) {
@@ -96,7 +96,7 @@ public class AccionesHelado {
             proc.setInt(1, id);
             
             state = proc.executeUpdate();
-            System.out.println("Se borro de manera exitosa");
+            //System.out.println("Se borro de manera exitosa");
             con.close();
             
         }catch(Exception ed){
@@ -129,7 +129,7 @@ public class AccionesHelado {
                 h.setStock_gramos(rs.getInt(4));
             }
             
-            System.out.println("Exito al buscar el helado por el ID");
+            //System.out.println("Exito al buscar el helado por el ID");
             con.close();
             
         }catch(Exception ed){
@@ -167,7 +167,7 @@ public class AccionesHelado {
             proc.setInt(14, h.getStock_gramos());
             
             state = proc.executeUpdate();
-            System.out.println("Helado actualizado con exito");
+            //System.out.println("Helado actualizado con exito");
             con.close();
             
         }catch(Exception ed){

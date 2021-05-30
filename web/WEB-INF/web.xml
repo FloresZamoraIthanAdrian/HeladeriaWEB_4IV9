@@ -16,6 +16,14 @@
         <servlet-name>actualizarHelado</servlet-name>
         <servlet-class>Servlet.actualizarHelado</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>comprarHelado</servlet-name>
+        <servlet-class>Servlet.comprarHelado</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BorrarDelCarrito</servlet-name>
+        <servlet-class>Servlet.BorrarDelCarrito</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registrarUsuario</servlet-name>
         <url-pattern>/registrarUsuario</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>actualizarHelado</servlet-name>
         <url-pattern>/actualizarHelado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>comprarHelado</servlet-name>
+        <url-pattern>/comprarHelado</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BorrarDelCarrito</servlet-name>
+        <url-pattern>/BorrarDelCarrito</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

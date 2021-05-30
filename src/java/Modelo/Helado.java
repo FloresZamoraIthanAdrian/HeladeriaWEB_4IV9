@@ -2,7 +2,7 @@ package Modelo;
 
 public class Helado {
 
-    private int id, idprecio, promocion, presentacion, stock_gramos;
+    private int id, idprecio, promocion, presentacion, stock_gramos, disponibilidad;
     private String nombre, spromcion, spresentacion;
     
     public Helado(){}
@@ -69,6 +69,14 @@ public class Helado {
 
     public void setStock_gramos(int stock_gramos) {
         this.stock_gramos = stock_gramos;
+    }
+
+    public int getDisponibilidad() {
+        return disponibilidad;
+    }
+
+    public void setDisponibilidad(int disponibilidad) {
+        this.disponibilidad = disponibilidad;
     }
     
 }

@@ -145,7 +145,7 @@
                         <p class="centro2">
                             Precio (100gr): $<%= h.getIdprecio()%>
                         </p>
-                        <a style="text-decoration: none;" href="ComprarHelado?id=<%= h.getId()%>" name="" class="boton2">Comprar</a>
+                        <a style="text-decoration: none;" href="ComprarHelado.jsp?id=<%= h.getId()%>" name="" class="boton2">Comprar</a>
                     </div>
                 </div>
 

@@ -90,7 +90,7 @@ function agregarHelado(){
 }
 
 function Catalogo(){
-    location.href = "./MenuHeladeria.jsp";
+    location.href = "./Menu.jsp";
 }
 function Carrito(){
     location.href = "./Carrito.jsp";

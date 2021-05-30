@@ -2,8 +2,9 @@ package Modelo;
 
 public class Usuario {
 
-    private int id, edad;
+    private int id, edad, cantidad_pedido;
     private String nombre, appat, apmat, user, nacimiento, tel_par, tel_cel, domicilio, pass;
+    private double subtotal;
     
     public Usuario(){}
 
@@ -93,6 +94,22 @@ public class Usuario {
 
     public void setPass(String pass) {
         this.pass = pass;
+    }
+
+    public int getCantidad_pedido() {
+        return cantidad_pedido;
+    }
+
+    public void setCantidad_pedido(int cantidad_pedido) {
+        this.cantidad_pedido = cantidad_pedido;
+    }
+
+    public double getSubtotal() {
+        return subtotal;
+    }
+
+    public void setSubtotal(double subtotal) {
+        this.subtotal = subtotal;
     }
     
 }
