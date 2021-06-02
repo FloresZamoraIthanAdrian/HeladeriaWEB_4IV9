@@ -78,6 +78,7 @@ function validarRegistro(formularioRegistro) {
     }
 
 }
+
 function validarCompra(formularioCompra) {
     if (formularioCompra.Cantidad.value < 1) {
         alert('Tiene que comprar al menos un litro de helado');

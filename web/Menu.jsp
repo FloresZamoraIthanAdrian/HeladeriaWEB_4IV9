@@ -26,6 +26,7 @@
                 <nav>
                     <ul>
                         <li onclick = "javascript:Carrito()"><i class="fas fa-shopping-cart"></i> Ver Carrito</li>
+                        <a style='text-decoration: none; color: white;' href='Cuenta.jsp'><li>Mi cuenta</li></a>
                             <%
                                 HttpSession sesion = request.getSession();
                                 String usuer, id;

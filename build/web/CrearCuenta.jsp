@@ -39,17 +39,17 @@
                 <form action="registrarUsuario" name="" onsubmit="return validarRegistro(this)" id="formularioRegistro" class="formulario">
 
                     <h4 class="formulario__titulo">Porfavor ingrese sus datos para poder disfrutar de los mejores helados</h4>
-                    <input id="inputXD" type="text" onkeypress="return validarLetras(event)" name = "nombre" class="formulario__input" placeholder="Nombre">
-                    <input id="inputXD" type="text" onkeypress="return validarLetras(event)" name = "appat" class="formulario__input" placeholder="Apellido paterno">
-                    <input id="inputXD" type="text" onkeypress="return validarLetras(event)" name = "apmat" class="formulario__input" placeholder="Apellido materno">
-                    <input id="inputXD" type="text" onkeypress="return validarLetras(event)" name = "usuario" class="formulario__input" placeholder="Usuario">
-                    <input id="inputXD" type="text" onkeypress="return validarNumeros(event)" name = "edad" class="formulario__input" placeholder="Edad">
-                    <input id="inputXD" type="date" onkeypress="return validarNumeros(event)" name = "fecha_de_nacimiento" class="formulario__input" placeholder="Fecha de nacimiento(dd / mm / aaaa)">
-                    <input id="inputXD" type="text" onkeypress="return validarNumeros(event)" name = "telefono_Particular" class="formulario__input" placeholder="Telefono particular">
-                    <input id="inputXD" type="text" onkeypress="return validarNumeros(event)" name = "telefono_Celular" class="formulario__input" placeholder="Telefono celular">
-                    <input id="inputXD" type="text" onkeypress="return validarAlfaNumericos(event)" name = "domicilio" class="formulario__input" placeholder="Domicilio">
-                    <input id="password" type="password" onkeypress="return validarAlfaNumericos(event)" name = "contrasena" class="formulario__input" placeholder="Contraseña (6 caracteres mínimo)">
-                    <input id="password2" type="password" onkeypress="return validarAlfaNumericos(event)" name = "verificarContrasena" class="formulario__input" placeholder="Verificar Contraseña">
+                    <input type="text" onkeypress="return validarLetras(event)" name = "nombre" class="formulario__input" placeholder="Nombre">
+                    <input onkeypress="return validarLetras(event)" name = "appat" class="formulario__input" placeholder="Apellido paterno">
+                    <input type="text" onkeypress="return validarLetras(event)" name = "apmat" class="formulario__input" placeholder="Apellido materno">
+                    <input type="text" onkeypress="return validarLetras(event)" name = "usuario" class="formulario__input" placeholder="Usuario">
+                    <input type="text" onkeypress="return validarNumeros(event)" name = "edad" class="formulario__input" placeholder="Edad">
+                    <input type="date" onkeypress="return validarNumeros(event)" name = "fecha_de_nacimiento" class="formulario__input" placeholder="Fecha de nacimiento(dd / mm / aaaa)">
+                    <input type="text" onkeypress="return validarNumeros(event)" name = "telefono_Particular" class="formulario__input" placeholder="Telefono particular">
+                    <input type="text" onkeypress="return validarNumeros(event)" name = "telefono_Celular" class="formulario__input" placeholder="Telefono celular">
+                    <input type="text" onkeypress="return validarAlfaNumericos(event)" name = "domicilio" class="formulario__input" placeholder="Domicilio">
+                    <input type="password" onkeypress="return validarAlfaNumericos(event)" name = "contrasena" class="formulario__input" placeholder="Contraseña (6 caracteres mínimo)">
+                    <input type="password" onkeypress="return validarAlfaNumericos(event)" name = "verificarContrasena" class="formulario__input" placeholder="Verificar Contraseña">
 
                     <p class = "centro">Estoy deacuerdo con <a href="javascript:abrir()">Términos y Condiciones <i class="far fa-check-square"></i></a></p>
 

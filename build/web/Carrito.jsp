@@ -35,6 +35,7 @@
                 <nav>
                     <ul>
                         <li onclick = "javascript:Catalogo()"><i class="fas fa-ice-cream"></i> Seguir Comprando</li>
+                        <a style='text-decoration: none; color: white;' href='Cuenta.jsp'><li>Mi cuenta</li></a>
                             <%
                                 HttpSession sesion = request.getSession();
                                 String usuer, id;

@@ -3,7 +3,7 @@ package Modelo;
 public class Usuario {
 
     private int id, edad, cantidad_pedido;
-    private String nombre, appat, apmat, user, nacimiento, tel_par, tel_cel, domicilio, pass;
+    private String nombre, appat, apmat, user, nacimiento, tel_par, tel_cel, domicilio, pass, passNew;
     private double subtotal;
     
     public Usuario(){}
@@ -110,6 +110,14 @@ public class Usuario {
 
     public void setSubtotal(double subtotal) {
         this.subtotal = subtotal;
+    }
+
+    public String getPassNew() {
+        return passNew;
+    }
+
+    public void setPassNew(String passNew) {
+        this.passNew = passNew;
     }
     
 }

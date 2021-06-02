@@ -174,4 +174,60 @@ public class AccionesUsuario {
         return state;
     }
     
+    public static int editarDatosPersonales(Usuario u){
+        int state = 0;
+        
+        try{
+            
+            Connection con = Conexion.getConnection();
+            String q = "{call editarDatosUsuariouwu(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+            
+            CallableStatement proc = con.prepareCall(q);
+            proc.setInt(1, u.getId());
+            proc.setString(2, u.getNombre());
+            proc.setString(3, u.getAppat());
+            proc.setString(4, u.getApmat());
+            proc.setString(5, u.getUser());
+            proc.setInt(6, u.getEdad());
+            proc.setString(7, u.getNacimiento());
+            proc.setString(8, u.getTel_par());
+            proc.setString(9, u.getTel_cel());
+            proc.setString(10, u.getDomicilio());
+            proc.setString(11, u.getPass());
+            
+            state = proc.executeUpdate();
+            con.close();
+            
+        }catch(Exception ed){
+            System.out.println("Ocurrio un error al actualizar los datos del usuario");
+            System.out.println(ed.getMessage());
+        }
+        
+        return state;
+    }
+    
+    public static int cambiarContrasena(Usuario u){
+        int state = 0;
+        
+        try{
+                
+            Connection con = Conexion.getConnection();
+            String q = "{call cambiarPass(?, ?, ?)}";
+            
+            CallableStatement proc = con.prepareCall(q);
+            proc.setInt(1, u.getId());
+            proc.setString(2, u.getPass());
+            proc.setString(3, u.getPassNew());
+            
+            state = proc.executeUpdate();
+            con.close();
+            
+        }catch(Exception ed){
+            System.out.println("Hubo un error al actualizar la contrasena del usuario");
+            System.out.println(ed.getMessage());
+        }
+        
+        return state;
+    }
+    
 }

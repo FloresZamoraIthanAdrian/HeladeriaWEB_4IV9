@@ -24,6 +24,22 @@
         <servlet-name>BorrarDelCarrito</servlet-name>
         <servlet-class>Servlet.BorrarDelCarrito</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>editarDatosUsuario</servlet-name>
+        <servlet-class>Servlet.editarDatosUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CambiarPass</servlet-name>
+        <servlet-class>Servlet.CambiarPass</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>agregarTarjeta</servlet-name>
+        <servlet-class>Servlet.agregarTarjeta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BorrarTarjeta</servlet-name>
+        <servlet-class>Servlet.BorrarTarjeta</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registrarUsuario</servlet-name>
         <url-pattern>/registrarUsuario</url-pattern>
@@ -47,6 +63,22 @@
     <servlet-mapping>
         <servlet-name>BorrarDelCarrito</servlet-name>
         <url-pattern>/BorrarDelCarrito</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editarDatosUsuario</servlet-name>
+        <url-pattern>/editarDatosUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CambiarPass</servlet-name>
+        <url-pattern>/CambiarPass</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>agregarTarjeta</servlet-name>
+        <url-pattern>/agregarTarjeta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BorrarTarjeta</servlet-name>
+        <url-pattern>/BorrarTarjeta</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

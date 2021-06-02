@@ -245,9 +245,66 @@ delete from dcompra where id_compra = id_pedidoB and id_ecompra = id_usuarioB;
 END $$
 DELIMITER 
 
-call borrarHeladoCarritounu(7, 5);
-select * from dcompra;
+DELIMITER $$
+create procedure editarDatosUsuariouwu(
+in id_editar int,
+in nombre varchar(30),
+in appat varchar(30),
+in apmat varchar(30),
+in usuario varchar(30),
+in age int,
+in naci varchar(15),
+in tlfp varchar(12),
+in tlfc varchar(12),
+in dondeVive varchar(100), 
+in passwd varchar(30)
+)
+BEGIN
+update musuario set 
+nom_usu = nombre,
+appat_usu = appat, 
+appmat_usu = apmat,
+usu = usuario,
+edad_usu = age,
+fecha = naci,
+telp_usu = tlfp,
+telc_usu = tlfc,
+domicilio = dondeVive
+where id_usuario = id_editar and cont_usu = passwd;
+END $$
+DELIMITER 
 
+DELIMITER $$
+create procedure cambiarPass(
+in id_cambiar int, 
+in oldPass varchar(20),
+in newPass varchar(20)
+)
+BEGIN
+set @var := (select cont_usu from musuario where id_usuario = id_cambiar);
+set @ifq := (select if(@var = oldPass, 1, 0));
+update musuario set cont_usu = newPass where id_usuario = id_cambiar and @ifq > 0;
+END $$
+DELIMITER 
+
+DELIMITER $$
+create table mtarjeta(
+id_generalt int not null auto_increment,
+id_tarjeta int not null,
+titular_tarjeta varchar(30) not null,
+numero_tarjeta varchar(16) not null,
+mes_vencimiento varchar(3) not null,
+year_vencimiento varchar(4) not null,
+cvv_tarjeta varchar(4) not null,
+id_tipoTarjeta int not null,
+primary key(id_generalt)
+);
+
+create table ctipoTarjeta(
+id_tipoTarjeta int not null auto_increment,
+tipo_tarejeta varchar(45),
+primary key(id_tipoTarjeta)
+);
 
 
 
