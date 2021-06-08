@@ -7,7 +7,7 @@
     <head>
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Compra</title>
+        <title>Comprar Helado</title>
         <link rel="icon" href= "images/icon.png">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@300&display=swap" rel="stylesheet">
@@ -63,7 +63,7 @@
                     <br>
                     <h4 style="font-size:20px;" class="izquierda">Presentaciones disponibles</h4>
                     
-                    <select multiple class="form-control" name="presentaciones">
+                    <select multiple required class="form-control" name="presentaciones">
 
                         <%
                             List<Presentaciones> lista2 = AccionesPresentaciones.listarPresentaciones();
@@ -75,12 +75,11 @@
                         %>
 
                     </select>
-                        <p><%= h.getStock_gramos() %></p>
                         <input type="number" min="1" max="" name = "Cantidad" class="formulario__input" placeholder="Inserte Cantidad que desea comprar">
                     <br>
                     <h4 style="font-size:20px;" class="izquierda">Promociones disponibles</h4>
                     
-                    <select multiple name="promociones" class="form-control" >
+                    <select multiple required name="promociones" class="form-control" >
                         
                         <%
                             List<Promociones> lista = AccionesPromociones.listarPromociones();

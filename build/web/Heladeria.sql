@@ -67,6 +67,7 @@ select * from mProducto;
 select * from cpromociones_a;
 SELECT * FROM cpresentaciones_a;
 select * from musuario;
+select * from dcompra;
 
 create table cpromociones_a(
 id_promociones_a int not null auto_increment,
@@ -236,6 +237,35 @@ END $$
 DELIMITER 
 
 DELIMITER $$
+create procedure editarPedido(
+in id_com int,
+in id_product int,
+in id_promo int, 
+in id_pre int, 
+in cant int,
+in id_ped int,
+in sub int,
+in id_userP int
+)
+BEGIN
+set @var:= (select stock_producto from mproducto where id_producto = id_product);
+set @cantidad := (select cantidad_presentacion from cpresentacion where id_presentacion = id_pre);
+set @disponibilidad = @var/@cantidad;
+set @boolDisp := (select IF(@disponibilidad > cantidad, 1, 0));
+set @precio := (select precio_producto from mproducto where id_producto = id_product);
+set @gramostotales = cantidad * @precio;
+set @reducir = @var - @gramostotales;
+update mproducto set stock_producto = @reducir where id_producto = id_product;
+set @precio100gr := (select precio_producto from mproducto where id_producto = id_product);
+set @numVeces = @gramostotales / 100;
+set @subtotal = @numVeces * @precio100gr;
+update Dcompra set id_promocion = id_promo, id_presentacion = id_pre, cantidad_p = cant, subtotal = @subtotal 
+where id_compra = id_com and 
+id_ecompra = id_userP;
+END $$
+DELIMITER 
+
+DELIMITER $$
 create procedure borrarHeladoCarritounu(
 in id_pedidoB int,
 in id_usuarioB int
@@ -306,8 +336,36 @@ tipo_tarejeta varchar(45),
 primary key(id_tipoTarjeta)
 );
 
+DELIMITER $$
+create procedure editarHeladoCC10(
+in idProm int, 
+in idPres int, 
+in id_User int,
+in idPed int, 
+in cant int
+)
+BEGIN
+set @idPro := (select id_producto from dcompra where id_compra = idPed and id_ecompra = id_User);
+set @stock := (select stock_producto from mproducto where id_producto = @idPro);
+set @preciogr := (select precio_producto from mproducto where id_producto = idProm);
+set @cantidadPres := (select cantidad_presentacion from cpresentacion where id_presentacion = idPres);
+set @disponibilidad = @stock/ @cantidadPres;
+set @boolDisp := (select IF(@disponibilidad > @cantidadPres, 1, 0));
+set @precioUnidad = @preciogr * @cantidadPres;
+set @vecesCobrar = cant/@cantidadPres;
+set @subtotal = cant * @precioUnidad;
+update dcompra set id_promocion = idProm, id_presentacion = idPres, cantidad_p = cant, subtotal = @subtotal 
+where id_compra = idPed and id_ecompra = id_User and @boolDisp > 0;
+END $$
+DELIMITER 
 
-
+DELIMITER $$
+create table mcompra(
+id_compra int not null auto_increment,
+fecha_compra date not null,
+id_dcompra int not null,
+primary key(id_compra)
+);
 
 
 

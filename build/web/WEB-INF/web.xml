@@ -40,6 +40,14 @@
         <servlet-name>BorrarTarjeta</servlet-name>
         <servlet-class>Servlet.BorrarTarjeta</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>editarDetallesCompra</servlet-name>
+        <servlet-class>Servlet.editarDetallesCompra</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GenerarTicket</servlet-name>
+        <servlet-class>Servlet.GenerarTicket</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registrarUsuario</servlet-name>
         <url-pattern>/registrarUsuario</url-pattern>
@@ -79,6 +87,14 @@
     <servlet-mapping>
         <servlet-name>BorrarTarjeta</servlet-name>
         <url-pattern>/BorrarTarjeta</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editarDetallesCompra</servlet-name>
+        <url-pattern>/editarDetallesCompra</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GenerarTicket</servlet-name>
+        <url-pattern>/GenerarTicket</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

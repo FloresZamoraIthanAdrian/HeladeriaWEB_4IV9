@@ -36,20 +36,20 @@
                     <ul>
                         <li onclick = "javascript:Catalogo()"><i class="fas fa-ice-cream"></i> Seguir Comprando</li>
                         <a style='text-decoration: none; color: white;' href='Cuenta.jsp'><li>Mi cuenta</li></a>
-                            <%
-                                HttpSession sesion = request.getSession();
-                                String usuer, id;
+                                <%
+                                    HttpSession sesion = request.getSession();
+                                    String usuer, id;
 
-                                if (sesion.getAttribute("user") != null) {
-                                    usuer = sesion.getAttribute("user").toString();
-                                    id = sesion.getAttribute("id_usuS").toString();
-                                    int id_usu = Integer.parseInt(id);
+                                    if (sesion.getAttribute("user") != null) {
+                                        usuer = sesion.getAttribute("user").toString();
+                                        id = sesion.getAttribute("id_usuS").toString();
+                                        int id_usu = Integer.parseInt(id);
 
-                                    Usuario u = AccionesUsuario.buscarUsuarioId(id_usu);
+                                        Usuario u = AccionesUsuario.buscarUsuarioId(id_usu);
 
-                                    out.print("<a style='text-decoration: none; color: white;' href='iniciarSesion.jsp?cerrar=true'><li>Cerrar Sesion de " + u.getUser()+ "</li></a>");
+                                        out.print("<a style='text-decoration: none; color: white;' href='iniciarSesion.jsp?cerrar=true'><li>Cerrar Sesion de " + u.getUser() + "</li></a>");
 
-                            %>
+                                %>
                     </ul>
                 </nav>
             </div>
@@ -92,10 +92,18 @@
                         <p class="centro2">
                             Subtotal: $<%= p.getSubtotal()%>
                         </p>
-                        <a style="color: white; text-decoration: none;" href="GenerarTicket.jsp?id=<%= h.getId()%>" name="" class="boton2">Comprar</a>
+
+                        <a style="color: white; text-decoration: none;" href="GenerarTicket?id=<%= h.getId()%>" name="" class="boton2">Comprar</a>
+                        <br><br>
                         <a style="color: white; text-decoration: none;" 
-                           href="BorrarDelCarrito?id=<%= p.getId_pedido() %>&id_usuario=<%= u.getId() %>" 
-                           name="" class="boton2">Borrar</a>
+                           href="BorrarDelCarrito?id=<%= p.getId_pedido()%>&id_usuario=<%= u.getId()%>" 
+                           name="" class="boton2">Borrar
+                        </a><br><br>
+                        <!---<a style="color: white; text-decoration: none;" 
+                           href="EditarDetalles.jsp?idEditar=<%= p.getId_pedido()%>&id_usuario=<%= u.getId()%>&idH=<%= h.getId() %>" 
+                           class="boton2">Editar detalles del pedidio
+                        </a>-=-->
+                        <br><br>
                     </div>
                 </div>
 

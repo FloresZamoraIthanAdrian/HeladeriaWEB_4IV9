@@ -174,6 +174,41 @@ public class AccionesUsuario {
         return state;
     }
     
+    public static Pedido buscarDetallesPedido(int id_Pedido, int id_Usuario){
+        Pedido p = new Pedido();
+        
+        try{
+            
+            Connection con = Conexion.getConnection();
+            String q = "select * from dcompra where id_compra "
+                    + " = ? and id_ecompra = ?";
+            
+            PreparedStatement ps = con.prepareStatement(q);
+            
+            ps.setInt(1, id_Pedido);
+            ps.setInt(2, id_Usuario);
+            
+            ResultSet rs = ps.executeQuery();
+            
+            if(rs.next()){
+                p.setId_usuario(rs.getInt(1));
+                p.setId_producto(rs.getInt(2));
+                p.setId_promocion(rs.getInt(3));
+                p.setId_presentacion(rs.getInt(4));
+                p.setCantidad(rs.getInt(5));
+                p.setSubtotal(rs.getInt(6));
+                p.setId_usuario(rs.getInt(7));
+            }
+            con.close();
+            
+        }catch(Exception ed){
+            System.out.println("Error el buscar el pedido");
+            System.out.println(ed.getMessage());
+        }
+        
+        return p;
+    }
+    
     public static int editarDatosPersonales(Usuario u){
         int state = 0;
         
@@ -224,6 +259,30 @@ public class AccionesUsuario {
             
         }catch(Exception ed){
             System.out.println("Hubo un error al actualizar la contrasena del usuario");
+            System.out.println(ed.getMessage());
+        }
+        
+        return state;
+    }
+    
+    public static int actualizarDatosPedido(Usuario u, Pedido ped, Helado h, Presentaciones pre, Promociones pro){
+        int state = 0;
+        
+        try{
+            
+            Connection con = Conexion.getConnection();
+            String q  = "update dcompra set id_promocion = ?, "
+                    + "id_presentacion = ?, cantidad_p = ?, "
+                    + "subtotal = ? where id_compra = ?";
+            
+            PreparedStatement ps = con.prepareStatement(q);
+            ps.setInt(1, pro.getId());
+            ps.setInt(2, pre.getId());
+            ps.setInt(3, ped.getCantidad());
+            
+            
+        }catch(Exception ed){
+            System.out.println("Error al actualizar los detalles de un pedido");
             System.out.println(ed.getMessage());
         }
         

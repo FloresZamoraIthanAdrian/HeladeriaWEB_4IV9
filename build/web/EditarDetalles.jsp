@@ -7,7 +7,7 @@
     <head>
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Comprar Helado</title>
+        <title>Editar detalles del pedido</title>
         <link rel="icon" href= "images/icon.png">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@300&display=swap" rel="stylesheet">
@@ -49,54 +49,56 @@
         </header>
 
         <section>
-            <%                int id_h = Integer.parseInt(request.getParameter("id"));
+            <%                int id_Pedido = Integer.parseInt(request.getParameter("idEditar"));
+                int id_Usuario = Integer.parseInt(request.getParameter("id_usuario"));
+                Pedido p = AccionesUsuario.buscarDetallesPedido(id_Pedido, id_Usuario);
+                int id_h = Integer.parseInt(request.getParameter("idH"));
                 Helado h = AccionesHelado.buscarHeladoId(id_h);
             %>
-
             <main>
-                <form action="comprarHelado" class="formulario">
-                    <input type="hidden" name="id_usuario" readonly value="<%= u.getId() %>">
-                    <input type="hidden" name="id_heladoF" readonly value="<%= h.getId() %>">
+                <form class="formulario" action="editarDetallesCompra">
+                    <h4 style="font-size:20px;" class="formulario__titulo">Editar detalles de la compra</h4>
+                    <input value="<%= p.getId_pedido()%>" name="id_pedido" type="hidden">
+                    <input value="<%= p.getId_usuario()%>" name="id_usuario" type="hidden">
+                    <input value="<%= p.getId_producto() %>" name="id_producto" type="hidden">
                     <h4 style="font-size:20px;" class="formulario__titulo"><%= h.getNombre()%> . . . ¡Que buena Elección!</h4>
                     <br>
                     <h4 style="font-size:20px;" class="izquierda">Precio por 100 gramos: $<%= h.getIdprecio()%></h4>
                     <br>
                     <h4 style="font-size:20px;" class="izquierda">Presentaciones disponibles</h4>
-                    
-                    <select multiple required class="form-control" name="presentaciones">
+
+                    <select  multiple required class="form-control" name="presentaciones">
 
                         <%
                             List<Presentaciones> lista2 = AccionesPresentaciones.listarPresentaciones();
                             for (Presentaciones pp : lista2) {
                         %>
-                        <option value="<%= pp.getId() %>" > <%= pp.getPresentacion()%> - <%= pp.getCantidad_presentacion()%>(Gr) </option>
+                        <option value="<%= pp.getId()%>" > <%= pp.getPresentacion()%> - <%= pp.getCantidad_presentacion()%>(Gr) </option>
                         <%
                             }
                         %>
 
                     </select>
-                        <input type="number" min="1" max="" name = "Cantidad" class="formulario__input" placeholder="Inserte Cantidad que desea comprar">
+                    <input value="<%= p.getCantidad()%>" type="number" min="1" max="" name = "Cantidad" class="formulario__input" placeholder="Inserte Cantidad que desea comprar">
                     <br>
                     <h4 style="font-size:20px;" class="izquierda">Promociones disponibles</h4>
-                    
+
                     <select multiple required name="promociones" class="form-control" >
-                        
+
                         <%
                             List<Promociones> lista = AccionesPromociones.listarPromociones();
-                            for (Promociones p : lista) {
+                            for (Promociones pp : lista) {
                         %>
 
-                        <option value="<%= p.getId() %>" > <%= p.getPromocion()%> </option>
+                        <option value="<%= pp.getId()%>" > <%= pp.getPromocion()%> </option>
 
                         <%
                             }
                         %>
-                        
+
                     </select>
-                        
-                    <br>
-                    <input type="submit" class="boton" name = "AceptarCompra" value="Agregar al carrito">
-                    
+                    <br><br>
+                    <input type="submit" class="boton" name = "AceptarCompra" value="Editar detalles de la compra">
                 </form>
             </main>
         </section>
@@ -115,6 +117,6 @@
 
         <script src="./scripts/script.js"></script>           
         <script src="./scripts/CompraHelado.js"></script>
-        
+
     </body>
 </html>
